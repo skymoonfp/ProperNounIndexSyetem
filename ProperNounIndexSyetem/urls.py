@@ -13,9 +13,24 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path
+
+import os
+
+from django.conf.urls import url
+from django.urls import re_path
+from django.views.static import serve
+
+from ProperNounIndexSyetem import settings
+from ProperNounIndexSyetem.activator import process
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+
+   # url(r"Main/", include("Main.urls")),
+   # url(r"Admin/", include("Admin.urls")),
+
+   url(r'^(?P<app>(\w+))/(?P<function>(\w+))/(?P<page>(\w+))/(?P<id>(\w+))/$', process),
+   url(r'^(?P<app>(\w+))/(?P<function>(\w+))/(?P<id>(\w+))/$', process),
+   url(r'^(?P<app>(\w+))/(?P<function>(\w+))/$', process),
+   url(r'^(?P<app>(\w+))/$', process, {'function': 'index'}),
+   re_path(r'^image/(?P<path>.*)$', serve, {'document_root': os.path.join(settings.BASE_DIR, 'image')}),
 ]
