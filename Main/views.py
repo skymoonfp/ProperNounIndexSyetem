@@ -5,7 +5,7 @@ from django.shortcuts import render
 
 
 def index(request, **kwargs):
-    return HttpResponse("<h1>这是主页</h1>")
+    return render(request, "index.html", locals())
 
 
 def test(request, **kwargs):
@@ -22,7 +22,6 @@ def login(request, **kwargs):
 
 
 def operation(request, **kwargs):
-    # return render(request, "operation.html", {"data": "AAA"})
     return render(request, "operation.html", locals())
 
 

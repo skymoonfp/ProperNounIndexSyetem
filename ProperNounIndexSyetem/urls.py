@@ -16,7 +16,7 @@ Including another URLconf
 
 import os
 
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.urls import re_path
 from django.views.static import serve
 
@@ -25,8 +25,7 @@ from ProperNounIndexSyetem.activator import process
 
 urlpatterns = [
 
-   # url(r"Main/", include("Main.urls")),
-   # url(r"Admin/", include("Admin.urls")),
+   url(r"^Main/index/(\w+)$", include("Main.urls")),
 
    url(r'^(?P<app>(\w+))/(?P<function>(\w+))/(?P<page>(\w+))/(?P<id>(\w+))/$', process),
    url(r'^(?P<app>(\w+))/(?P<function>(\w+))/(?P<id>(\w+))/$', process),

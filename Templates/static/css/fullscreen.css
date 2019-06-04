@@ -1,3 +1,13 @@
+/*
+a {
+    text-decoration:none;
+}
+*/
+
+.hide {
+    display:none;
+}
+
 /*屏幕设置*/
 #full {
     margin:0 auto;

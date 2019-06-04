@@ -18,8 +18,8 @@ from Main.views import *
 
 urlpatterns = [
 
-    url(r"^index/$", index),
-    url(r"^login/(\d*)/$", login),
+    url(r"^index/(\w*)/$", index),
+    url(r"^(\w*)/login/(\d*)/$", login),
     url(r"^site_map/(?P<name>\d*)/$", site_map),
     url(r"^books/(?P<classes>\d*)/(?P<name>\w*)/$", books),
 

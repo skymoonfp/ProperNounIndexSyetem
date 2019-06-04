@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c741e2d6-a620-4e6b-ba80-92ff2490c97c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Templates/static/css/basic_tab.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Templates/static/css/easyui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Templates/static/js/basic_tab.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProperNounIndexSyetem/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProperNounIndexSyetem/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Templates/master/general.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/master/general.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Templates/static/css/fullscreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/static/css/fullscreen.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/static/js/head.js" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/static/js/head.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,45 +17,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Templates/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-              <folding>
-                <element signature="e#93#99#0" expanded="true" />
-                <element signature="e#99#105#0" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Templates/master/general.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-              <folding>
-                <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#b#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Templates/static/js/basic_tab.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -93,31 +54,37 @@
         <option value="$PROJECT_DIR$/admin/apps.py" />
         <option value="$PROJECT_DIR$/Admin/Admin.urls.py" />
         <option value="$PROJECT_DIR$/Admin/urls.py" />
-        <option value="$PROJECT_DIR$/Main/urls.py" />
         <option value="$PROJECT_DIR$/../便捷工具/django_dynamic_router/DynamicRouter/DynamicRouter/urls.py" />
         <option value="$PROJECT_DIR$/ProperNounIndexSyetem/activator.py" />
         <option value="$PROJECT_DIR$/Main/models.py" />
-        <option value="$PROJECT_DIR$/ProperNounIndexSyetem/urls.py" />
         <option value="$PROJECT_DIR$/ProperNounIndexSyetem/settings.py" />
         <option value="$PROJECT_DIR$/Templates/operation.html" />
         <option value="$PROJECT_DIR$/Main/templatetags/output.py" />
         <option value="$PROJECT_DIR$/Main/templatetags/master/general.html" />
         <option value="$PROJECT_DIR$/Templates/static/css/header.css" />
-        <option value="$PROJECT_DIR$/Main/views.py" />
         <option value="$PROJECT_DIR$/Templates/test.html" />
         <option value="$PROJECT_DIR$/Templates/static/css/body_main.css" />
-        <option value="$PROJECT_DIR$/Templates/static/css/fullscreen.css" />
         <option value="$PROJECT_DIR$/Templates/static/css/tab.css" />
         <option value="$PROJECT_DIR$/Templates/static/js/basic_tab.js" />
         <option value="$PROJECT_DIR$/Templates/static/css/basic_tab.css" />
         <option value="$PROJECT_DIR$/Templates/static/js/head.js" />
-        <option value="$PROJECT_DIR$/Templates/master/general.html" />
         <option value="$PROJECT_DIR$/Templates/login.html" />
+        <option value="$PROJECT_DIR$/Main/views.py" />
+        <option value="$PROJECT_DIR$/Templates/index.py" />
+        <option value="$PROJECT_DIR$/ProperNounIndexSyetem/urls.py" />
+        <option value="$PROJECT_DIR$/Main/urls.py" />
+        <option value="$PROJECT_DIR$/Templates/static/css/fullscreen.css" />
+        <option value="$PROJECT_DIR$/Templates/static/css/clock.css" />
+        <option value="$PROJECT_DIR$/Templates/static/js/clock.js" />
+        <option value="$PROJECT_DIR$/Templates/index.html" />
+        <option value="$PROJECT_DIR$/Templates/master/general.html" />
+        <option value="$PROJECT_DIR$/Templates/clock.html" />
+        <option value="$PROJECT_DIR$/../python_project/myhtml/clock.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1116" />
+    <option name="x" value="1115" />
     <option name="y" value="55" />
     <option name="width" value="870" />
     <option name="height" value="875" />
@@ -301,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559626611654</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Initial commit&#10;&#10;Signed-off-by: 心齋 &lt;954918@qq.com&gt;">
+      <created>1559652794866</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1559652794866</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -315,14 +289,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20634921" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34589946" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3529412" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49537036" weight="0.3529412" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49537036" weight="0.35" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -369,47 +342,6 @@
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../django/django/core/handlers/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="205" selection-start-line="205" selection-end-line="205" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../django/django/core/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProperNounIndexSyetem/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-          <folding>
-            <element signature="e#237#246#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProperNounIndexSyetem/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../django/django/db/backends/mysql/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/apps.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Admin/apps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -510,13 +442,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../django/django/conf/urls/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="35" lean-forward="true" selection-start-column="35" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../便捷工具/django_dynamic_router/DynamicRouter/DynamicRouter/wsgi.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -535,23 +460,6 @@
     <entry file="file://$PROJECT_DIR$/Admin/views.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-          <folding>
-            <element signature="e#155#187#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProperNounIndexSyetem/activator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../django/django/shortcuts.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-56">
@@ -568,9 +476,6 @@
           <caret line="52" selection-start-line="52" selection-end-line="52" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Templates/static/js/input.js">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Templates/static/image/operation/002.png">
       <provider selected="true" editor-type-id="images" />
@@ -591,13 +496,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProperNounIndexSyetem/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../django/django/template/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-54930" />
@@ -610,13 +508,6 @@
           <folding>
             <element signature="e#157#184#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProperNounIndexSyetem/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2300">
-          <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
         </state>
       </provider>
     </entry>
@@ -633,16 +524,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#27#72#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Templates/static/css/body_main.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -651,13 +532,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Templates/static/css/input.css">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Templates/static/css/fullscreen.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="76" column="27" selection-start-line="76" selection-start-column="27" selection-end-line="76" selection-end-column="27" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Templates/static/css/easyui.css">
       <provider selected="true" editor-type-id="text-editor" />
@@ -683,10 +557,125 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Templates/master/general.html">
+    <entry file="file://$PROJECT_DIR$/Templates/static/js/input.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Templates/static/js/searchEngine.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProperNounIndexSyetem/activator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProperNounIndexSyetem/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+          <folding>
+            <element signature="e#237#246#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../django/django/conf/urls/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding>
+            <element signature="e#154#186#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProperNounIndexSyetem/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProperNounIndexSyetem/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#646#655#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Templates/static/css/fullscreen.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../python_project/myhtml/js/clock.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="88" column="50" selection-start-line="88" selection-start-column="50" selection-end-line="88" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../python_project/myhtml/clock.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="195" column="1" selection-start-line="195" selection-start-column="1" selection-end-line="195" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../python_project/myhtml/clock.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#button#0;n#div#1;n#div#2;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="54" column="11" selection-start-line="54" selection-start-column="11" selection-end-line="54" selection-end-column="11" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Templates/master/general.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#b#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -694,15 +683,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Templates/login.html">
+    <entry file="file://$PROJECT_DIR$/Main/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="192">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
           <folding>
-            <element signature="e#93#99#0" expanded="true" />
-            <element signature="e#99#105#0" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#27#72#0" expanded="true" />
           </folding>
         </state>
       </provider>
