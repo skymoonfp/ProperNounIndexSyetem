@@ -1,9 +1,54 @@
-.full {
-    width:1024px;
+#full {
     margin:0 auto;
         margin-top: 0px;
         margin-right: auto;
         margin-bottom: 0px;
         margin-left: auto;
     background-color:grey;
+    width:1024px;
 }
+
+#body_header {
+    background-color:red;
+    height:220px;
+    width:100%;
+}
+
+#body_main {
+    background-color:pink;
+    height:100%;
+    width:100%;
+
+}
+
+#body_footer {
+    background-color:#FFA500;
+    height:20px;
+    width:100%;
+    clear:both;
+    text-align:center;
+}
+
+
+#header_logo {
+    margin:10px;
+    float:left;
+    height:100%;
+}
+
+#header_link {
+    margin:10px;
+        margin-top:100px;
+    float:left;
+    height:100%;
+    width:50%;
+}
+
+#header_other {
+    margin:10px;
+    float:left;
+    height:100%;
+}
+
+
+

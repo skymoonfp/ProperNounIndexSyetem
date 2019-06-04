@@ -8,7 +8,16 @@ def index(request, **kwargs):
     return HttpResponse("<h1>这是主页</h1>")
 
 
+def test(request, **kwargs):
+    return render(request, "test.html", locals())
+
+
 def login(request, **kwargs):
+    ret = {"status": ""}
+
+    if request.method == "POST":
+        pass
+
     return render(request, "login.html", {"data": "AAA"})
 
 

@@ -2,30 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c741e2d6-a620-4e6b-ba80-92ff2490c97c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Templates/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Templates/map.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Templates/operation.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Templates/static/css/fullscreen.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Templates/static/css/head.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Templates/static/css/header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Templates/static/css/input.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Templates/static/css/returntop.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Templates/static/image/login/001.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Templates/static/image/login/001.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Templates/static/image/operation/002.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Templates/static/js/head.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Templates/static/js/input.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Templates/static/js/jQuery-3.4.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Templates/static/js/jquery.easyui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Templates/static/js/returntop.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Templates/static/js/searchEngine.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main/templatetags/output.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Templates/master/general.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Templates/test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProperNounIndexSyetem/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProperNounIndexSyetem/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProperNounIndexSyetem/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProperNounIndexSyetem/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/static/css/fullscreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/static/css/fullscreen.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/static/css/head.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Templates/static/css/header.css" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,10 +21,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
+            <state relative-caret-position="294">
               <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
               <folding>
                 <element signature="e#27#72#0" expanded="true" />
@@ -48,37 +34,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ProperNounIndexSyetem/urls.py">
+        <entry file="file://$PROJECT_DIR$/Templates/static/js/head.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+            <state relative-caret-position="288">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Templates/login.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Templates/master/general.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ProperNounIndexSyetem/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="132" column="38" selection-start-line="132" selection-start-column="38" selection-end-line="132" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Templates/operation.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1776">
-              <caret line="28" column="111" selection-start-line="28" selection-start-column="111" selection-end-line="28" selection-end-column="111" />
+            <state relative-caret-position="168">
+              <caret line="30" column="50" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="50" />
+              <folding>
+                <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -89,6 +61,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -98,7 +71,16 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="心齋 &lt;954918@qq.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
+    <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -116,15 +98,21 @@
         <option value="$PROJECT_DIR$/Main/models.py" />
         <option value="$PROJECT_DIR$/ProperNounIndexSyetem/urls.py" />
         <option value="$PROJECT_DIR$/ProperNounIndexSyetem/settings.py" />
-        <option value="$PROJECT_DIR$/Templates/login.html" />
         <option value="$PROJECT_DIR$/Templates/operation.html" />
+        <option value="$PROJECT_DIR$/Main/templatetags/output.py" />
+        <option value="$PROJECT_DIR$/Main/templatetags/master/general.html" />
+        <option value="$PROJECT_DIR$/Templates/static/css/header.css" />
         <option value="$PROJECT_DIR$/Main/views.py" />
+        <option value="$PROJECT_DIR$/Templates/test.html" />
+        <option value="$PROJECT_DIR$/Templates/master/general.html" />
+        <option value="$PROJECT_DIR$/Templates/login.html" />
+        <option value="$PROJECT_DIR$/Templates/static/css/fullscreen.css" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="892" />
-    <option name="y" value="137" />
+    <option name="x" value="1025" />
+    <option name="y" value="50" />
     <option name="width" value="870" />
     <option name="height" value="875" />
   </component>
@@ -152,12 +140,24 @@
             <path>
               <item name="ProperNounIndexSyetem" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProperNounIndexSyetem" type="462c0819:PsiDirectoryNode" />
+              <item name="Main" type="462c0819:PsiDirectoryNode" />
+              <item name="templatetags" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProperNounIndexSyetem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProperNounIndexSyetem" type="462c0819:PsiDirectoryNode" />
               <item name="ProperNounIndexSyetem" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProperNounIndexSyetem" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProperNounIndexSyetem" type="462c0819:PsiDirectoryNode" />
               <item name="Templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProperNounIndexSyetem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProperNounIndexSyetem" type="462c0819:PsiDirectoryNode" />
+              <item name="Templates" type="462c0819:PsiDirectoryNode" />
+              <item name="master" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProperNounIndexSyetem" type="b2602c69:ProjectViewProjectNode" />
@@ -170,7 +170,14 @@
               <item name="ProperNounIndexSyetem" type="462c0819:PsiDirectoryNode" />
               <item name="Templates" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="image" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProperNounIndexSyetem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProperNounIndexSyetem" type="462c0819:PsiDirectoryNode" />
+              <item name="Templates" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProperNounIndexSyetem" type="b2602c69:ProjectViewProjectNode" />
@@ -184,13 +191,15 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Templates" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../python_project" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\DataAnalysis\ProperNounIndexSyetem\Templates" />
       <recent name="E:\DataAnalysis\ProperNounIndexSyetem\Templates\static" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -270,6 +279,14 @@
       <option name="presentableId" value="Default" />
       <updated>1559533141737</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial commit&#10;&#10;Signed-off-by: 心齋 &lt;954918@qq.com&gt;">
+      <created>1559589127622</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1559589127622</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -290,21 +307,31 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3529412" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49537036" visible="true" weight="0.34117648" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49537036" weight="0.35328186" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32818532" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32818532" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.66109425" weight="0.3011583" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5046296" side_tool="true" visible="true" weight="0.34117648" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5046296" side_tool="true" weight="0.42794117" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.25675675" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
+  <component name="UpdateCopyrightCheckinHandler">
+    <option name="UPDATE_COPYRIGHT" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="Initial commit&#10;&#10;Signed-off-by: 心齋 &lt;954918@qq.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit&#10;&#10;Signed-off-by: 心齋 &lt;954918@qq.com&gt;" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
   <component name="editorHistoryManager">
@@ -511,9 +538,6 @@
     <entry file="file://$PROJECT_DIR$/Templates/static/js/input.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Templates/static/js/head.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Templates/static/image/operation/002.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -523,39 +547,19 @@
     <entry file="file://$PROJECT_DIR$/Templates/static/image/login/001.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Templates/static/css/fullscreen.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Templates/static/css/returntop.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Templates/static/css/header.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Templates/static/css/input.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Templates/static/css/head.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Templates/operation.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1776">
-          <caret line="28" column="111" selection-start-line="28" selection-start-column="111" selection-end-line="28" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProperNounIndexSyetem/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="132" column="38" selection-start-line="132" selection-start-column="38" selection-end-line="132" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="408">
+          <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -566,12 +570,85 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../django/django/template/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-54930" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/templatetags/output.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="e#157#184#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProperNounIndexSyetem/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2300">
+          <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Templates/static/css/head.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Templates/static/css/header.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Templates/static/css/fullscreen.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#93#99#0" expanded="true" />
+            <element signature="e#99#105#0" expanded="true" />
+            <element signature="n#div#0;n#!!top" />
+            <element signature="n#div#1;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Templates/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Main/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
+        <state relative-caret-position="294">
           <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="e#27#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Templates/static/js/head.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Templates/master/general.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="30" column="50" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="50" />
+          <folding>
+            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
