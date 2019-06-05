@@ -1,20 +1,61 @@
-function Enter(id_) {
-    var id = document.getElementById(id_);
-    id.className = "redYellow";
+$(document).ready(function(){
+    $("input.username:text").val("请输入用户名");
+    $("input.username").css({"background-color":"white", "color":"grey"});
 
-    if (id.value == "请输入搜索内容" || id.value.trim() == "") {
-        id.value = "";
-    }
+    $("input.username").focus(function(){
+        if ($("input.username:text").val() == "请输入用户名" || $("input.username:text").val().trim() == "") {
+            $("input.username:text").val("");
+            $("input.username").css({"background-color":"#FFFFCC", "color":"blue"});
+        }
+    });
 
-}
+    $("input.username").blur(function(){
+        if ($("input.username:text").val() == "请输入用户名" || $("input.username:text").val().trim() == "") {
+            $("input.username:text").val("请输入用户名");
+            $("input.username").css({"background-color":"white", "color":"grey"});
+        } else {
+            $("input.username").css("background-color","#D6D6FF");
+        }
+    });
+});
 
-function Leave(id_) {
-    var id = document.getElementById(id_);
-    var val = id.value;
-    if (val.length == 0 || val.trim() == "") {
-        id.value = "请输入搜索内容";
-        id.className = "greyWhite";
-    }else{
-        id.className = "blackYellow";
-    }
-}
+
+//暗文pwd
+$(document).ready(function(){
+    $("input.password").css({"background-color":"white", "color":"grey"});
+
+    $("input.password").focus(function(){
+        $("input.password").css({"background-color":"#FFA07A", "color":"blue"});
+    });
+
+    $("input.password").blur(function(){
+         if ($("input.password").val().trim() == "") {
+            $("input.password").css({"background-color":"white", "color":"grey"});
+        } else {
+            $("input.password").css("background-color","#D6D6FF");}
+    });
+});
+
+
+//明文pwd
+/*$(document).ready(function(){
+    $("input.password:text").val("请输入密码");
+    $("input.password").css({"background-color":"white", "color":"grey"});
+
+    $("input.password").focus(function(){
+        if ($("input.password:text").val() == "请输入密码" || $("input.password:text").val().trim() == "") {
+            $("input.password:text").val("");
+            $("input.password").css({"background-color":"#FFA07A", "color":"blue"});
+        }
+        $("input.password").css({"background-color":"#FFA07A", "color":"blue"});
+    });
+
+    $("input.password").blur(function(){
+        if ($("input.password:text").val() == "请输入密码" || $("input.password:text").val().trim() == "") {
+            $("input.password:text").val("请输入密码");
+            $("input.password").css({"background-color":"white", "color":"grey"});
+        } else {
+            $("input.password").css("background-color","#D6D6FF");
+        }
+    });
+});*/
