@@ -15,7 +15,7 @@
 
 <div id="content_left">
     <div style="margin:10px;">
-        <iframe frameborder="1" height="500" name="iframe_a" sandbox="allow-scripts" src="/static/image/login/001.png"
+        <iframe frameborder="1" height="545" name="iframe_a" sandbox="allow-scripts" src="/static/image/login/001.png"
                 width=100%></iframe>
     </div>
     <div style="margin:10px;text-align:center;">
@@ -24,14 +24,14 @@
     </div>
 
 <div id="content_right">
-    <div class="tab-menu-box" style="height:555px;">
+    <div class="tab-menu-box" style="height:600px;">
         <div class="tab-menu">
             <ul id="tab-menu-title">
-                <li class="current" content-to="1">
-                    <button>登陆</button>
+                <li content-to="1">
+                    <button id="log">登陆</button>
                 </li>
-                <li content-to="2">
-                    <button>注册</button>
+                <li class="current" content-to="2">
+                    <button id="reg">注册</button>
                 </li>
             </ul>
         </div>
@@ -39,55 +39,65 @@
         <br><br>
 
         <div class="tab_content" id="tab-menu-body">
-            <div content="1">
+            <div class="hide" content="1">
                 <form>
+                    <br><br><br><br><br>
+                    <label class="log" for="username_1">&nbsp;&nbsp;用户名&nbsp;&nbsp;</label>
+                    <input class="username_log log" id="username_1" name="username_1" type="text"><br>
                     <br><br><br>
-                    <label class="log" for="username_1">用户名&nbsp;&nbsp;</label>
-                    <input class="username_log log" id="username_1" type="text"><br>
-                    <br><br><br>
-                    <label class="log" for="password_1">密&nbsp;&nbsp;&nbsp;&nbsp;码&nbsp;&nbsp;</label>
-                    <input class="password_log log" id="password_1" placeholder="请输入密码" type="password"><br>
+                    <label class="log" for="password_1">&nbsp;&nbsp;密&nbsp;&nbsp;&nbsp;&nbsp;码&nbsp;&nbsp;</label>
+                    <input class="password_log log" id="password_1" name="password_1" placeholder="请输入密码"
+                           type="password"><br>
                     <br><br><br><br>
                     <center>
                         <button class="button log" style="vertical-align:middle"><span>确认登陆 </span></button>
                     </center>
                 </form>
             </div>
-            <div class="hide" content="2">
-                <form>
-                    <label class="reg" for="username_2">用户名&nbsp;&nbsp;</label>
-                    <input class="username_reg reg" id="username_2" type="text"><a style="color:red;">（必填）</a><br>
-                    <a style="color:yellow;font-size:20px;">请输入由数字、字母、下划线组成的用户名，且数字不能位于首位</a>
-                    <br>
+            <div content="2">
+                <form action="/Main/register/" method="POST" name="form_reg" onsubmit="return CheckPost();">
+                    <label class="reg" for="username_2">&nbsp;&nbsp;用户名&nbsp;&nbsp;</label>
+                    <input class="username_reg reg" id="username_2" name="username_2" type="text"><a style="color:red;">（必填）</a><br>
+                    <a style="color:yellow;font-size:16px;">&nbsp;&nbsp;&nbsp;&nbsp;请输入用户名</a><br>
 
-                    <label class="reg" for="password_2">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</label>
-                    <input class="password_reg reg" id="password_2" placeholder="请输入密码" type="password"><a
+                    <label class="reg"
+                           for="password_2">&nbsp;&nbsp;密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</label>
+                    <input class="password_reg reg" id="password_2" name="password_2" placeholder="请输入密码"
+                           type="password"><a
                         style="color:red;">（必填）</a><br>
-                    <a style="color:yellow;font-size:20px;">请输入0~30位密码</a>
-                    <br>
+                    <a style="color:yellow;font-size:16px;">&nbsp;&nbsp;&nbsp;&nbsp;请输入密码，不要与用户名相同</a><br>
 
-                    <label class="reg" for="password_3">密码确认</label>
-                    <input class="password_reg2 reg" id="password_3" placeholder="请再次输入密码" type="password"><a
+                    <label class="reg" for="password_3">&nbsp;&nbsp;密码确认</label>
+                    <input class="password_reg2 reg" id="password_3" name="password_3" placeholder="请再次输入密码"
+                           type="password"><a
                         style="color:red;">（必填）</a><br>
-                    <a style="color:yellow;font-size:20px;">请输入0~30位密码</a>
-                    <br>
+                    <a style="color:yellow;font-size:16px;">&nbsp;&nbsp;&nbsp;&nbsp;请再次输入密码，不要与用户名相同</a><br>
 
-                    <label class="reg" for="birthday">出生日期</label>
-                    <input class="birthday_reg reg" id="birthday" type="text"><a style="color:red;">（选填）</a><br>
-
-                    <label class="reg" for="e_mail">电子邮箱</label>
-                    <input class="e_mail_reg reg" id="e_mail" type="text"><a style="color:red;">（选填）</a><br>
-
-                    <label class="reg" for="mobile">移动电话</label>
-                    <input class="mobile_reg reg" id="mobile" type="text"><a style="color:red;">（选填）</a><br>
-
-                    <label class="reg" for="identify_code">身份证号</label>
-                    <input class="identify_code_reg reg" id="identify_code" type="text"><a
+                    <label class="reg" for="birthday">&nbsp;&nbsp;出生日期</label>
+                    <input class="birthday_reg reg" id="birthday" name="birthday" type="text"><a
                         style="color:red;">（选填）</a><br>
+                    <a style="color:yellow;font-size:16px;">&nbsp;&nbsp;&nbsp;&nbsp;请输入出生日期（格式为yyyy-mm-dd）</a><br>
 
+                    <label class="reg" for="e_mail">&nbsp;&nbsp;电子邮箱</label>
+                    <input class="e_mail_reg reg" id="e_mail" name="e_mail" type="text"><a
+                        style="color:red;">（选填）</a><br>
+                    <a style="color:yellow;font-size:16px;">&nbsp;&nbsp;&nbsp;&nbsp;请输入电子邮箱（格式为xxx@xxx.xxx）</a><br>
+
+                    <label class="reg" for="mobile">&nbsp;&nbsp;移动电话</label>
+                    <input class="mobile_reg reg" id="mobile" name="mobile" type="text"><a
+                        style="color:red;">（选填）</a><br>
+                    <a style="color:yellow;font-size:16px;">&nbsp;&nbsp;&nbsp;&nbsp;请输入11位移动电话</a><br>
+
+                    <label class="reg" for="identify_code">&nbsp;&nbsp;身份证号</label>
+                    <input class="identify_code_reg reg" id="identify_code" name="identify_code" type="text"><a
+                        style="color:red;">（选填）</a><br>
+                    <a style="color:yellow;font-size:16px;">&nbsp;&nbsp;&nbsp;&nbsp;请输入18位身份证号</a><br>
                     <br>
+                    <div id="error" style="text-align:center;font-size:20px;color:red;"></div>
+
                     <center>
-                        <button class="button reg" style="vertical-align:middle"><span>确认注册 </span></button>
+                        <button class="button reg" onclick="submit" style="vertical-align:middle;"><span>确认注册 </span>
+                        </button>
                     </center>
                 </form>
             </div>
