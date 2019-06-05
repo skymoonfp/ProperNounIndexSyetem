@@ -15,7 +15,7 @@ a {
         margin-right: auto;
         margin-bottom: 0px;
         margin-left: auto;
-    background-color:grey;
+    background-color:black;
     width:1024px;
 }
 
@@ -25,7 +25,7 @@ a {
         margin-right: auto;
         margin-bottom: 0px;
         margin-left: auto;
-    background-color:grey;
+    background-color:#FF99CC;
     width:1024px;
     width:100%;
 }
@@ -33,19 +33,20 @@ a {
 
 /*屏幕分区*/
 #body_header {
-    background-color:red;
+    background-color:#6495ED;
     width:100%;
     overflow:hidden;
 }
 
 #body_main {
-    background-color:pink;
+    background-color:#FFFF99;
     width:100%;
     clear:both;
     overflow:hidden;
 }
 
 #body_footer {
+    margin:0 auto;
     background-color:#FFA500;
     width:100%;
     clear:both;
@@ -57,18 +58,21 @@ a {
 /*头部分区*/
 #header_logo {
     margin:10px;
+    background-color:#00FFFF;
     float:left;
 }
 
 #header_link {
     margin:10px;
         margin-top:100px;
+    background-color:#7FF000;
     float:left;
     width:50%;
 }
 
 #header_other {
     margin:10px;
+    background-color:#A9A9A9;
     float:left;
 }
 
