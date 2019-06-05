@@ -64,14 +64,113 @@
     overflow:hidden;
 }
 
-#tab-menu-body label {
+#tab-menu-body label.log {
     font-size:40px;
     color:red;
 }
 
-#tab-menu-body input {
-    font-size:30px;
+#tab-menu-body input.log {
+    padding:5px;
+    width:300px;
+    font-size:25px;
     color:grey;
+    font-style:italic;
+}
 
+#tab-menu-body label.reg {
+    font-size:30px;
+    color:red;
+}
+
+#tab-menu-body input.reg {
+    padding:2px;
+    width:300px;
+    font-size:18px;
+    color:grey;
+    font-style:italic;
+}
+
+
+/*大红按钮*/
+.button.log {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button.log span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button.log span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button.log:hover span {
+  padding-right: 25px;
+}
+
+.button.log:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+/*小号大红按钮*/
+.button.reg {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 24px;
+  padding: 16px;
+  width: 160px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 4px;
+}
+
+.button.reg span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button.reg span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button.reg:hover span {
+  padding-right: 20px;
+}
+
+.button.reg:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 

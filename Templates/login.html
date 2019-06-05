@@ -42,32 +42,59 @@
             <div content="1">
                 <form>
                     <br><br><br>
-                    <label for="username_1">用户名&nbsp;&nbsp;</label>
-                    <input class="username" id="username_1" type="text"><br>
-                    <a style="color:yellow;">请输入由数字、字母、下划线组成的用户名，且数字不能位于首位</a>
+                    <label class="log" for="username_1">用户名&nbsp;&nbsp;</label>
+                    <input class="username_log log" id="username_1" type="text"><br>
                     <br><br><br>
-                    <label for="password_1">密&nbsp;&nbsp;&nbsp;&nbsp;码&nbsp;&nbsp;</label>
-                    <input class="password" id="password_1" placeholder="请输入密码" type="password"><br>
-                    <a style="color:yellow;">请输入0~30位密码</a>
-
+                    <label class="log" for="password_1">密&nbsp;&nbsp;&nbsp;&nbsp;码&nbsp;&nbsp;</label>
+                    <input class="password_log log" id="password_1" placeholder="请输入密码" type="password"><br>
+                    <br><br><br><br>
+                    <center>
+                        <button class="button log" style="vertical-align:middle"><span>确认登陆 </span></button>
+                    </center>
                 </form>
-
-
             </div>
-            <div class="hide" content="2">content2</div>
+            <div class="hide" content="2">
+                <form>
+                    <label class="reg" for="username_2">用户名&nbsp;&nbsp;</label>
+                    <input class="username_reg reg" id="username_2" type="text"><a style="color:red;">（必填）</a><br>
+                    <a style="color:yellow;font-size:20px;">请输入由数字、字母、下划线组成的用户名，且数字不能位于首位</a>
+                    <br>
+
+                    <label class="reg" for="password_2">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</label>
+                    <input class="password_reg reg" id="password_2" placeholder="请输入密码" type="password"><a
+                        style="color:red;">（必填）</a><br>
+                    <a style="color:yellow;font-size:20px;">请输入0~30位密码</a>
+                    <br>
+
+                    <label class="reg" for="password_3">密码确认</label>
+                    <input class="password_reg2 reg" id="password_3" placeholder="请再次输入密码" type="password"><a
+                        style="color:red;">（必填）</a><br>
+                    <a style="color:yellow;font-size:20px;">请输入0~30位密码</a>
+                    <br>
+
+                    <label class="reg" for="birthday">出生日期</label>
+                    <input class="birthday_reg reg" id="birthday" type="text"><a style="color:red;">（选填）</a><br>
+
+                    <label class="reg" for="e_mail">电子邮箱</label>
+                    <input class="e_mail_reg reg" id="e_mail" type="text"><a style="color:red;">（选填）</a><br>
+
+                    <label class="reg" for="mobile">移动电话</label>
+                    <input class="mobile_reg reg" id="mobile" type="text"><a style="color:red;">（选填）</a><br>
+
+                    <label class="reg" for="identify_code">身份证号</label>
+                    <input class="identify_code_reg reg" id="identify_code" type="text"><a
+                        style="color:red;">（选填）</a><br>
+
+                    <br>
+                    <center>
+                        <button class="button reg" style="vertical-align:middle"><span>确认注册 </span></button>
+                    </center>
+                </form>
+            </div>
         </div>
     </div>
 
-    <!--<div class="easyui-tabs" style="margin:10px;height:532px;width:98%;">
-        <div style="padding:10px" title="登陆">
 
-        </div>
-        <div style="padding:10px" title="注册">
-            <ul class="easyui-tree" data-options="url:'tree_data1.json',method:'get',animate:true"></ul>
-        </div>
-    </div>-->
-    </div>
-
-<!--<div style="clear:both;"></div>-->
+    <!--<div style="clear:both;"></div>-->
 
 {% endblock %}
