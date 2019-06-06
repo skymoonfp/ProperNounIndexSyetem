@@ -1,0 +1,74 @@
+.fieldWrapper_book label {
+    margin:5px;
+    color:red;
+    font-size:20px;
+
+
+}
+
+.fieldWrapper_book div {
+    margin:3px;
+    float:left;
+
+
+
+}
+
+.fieldWrapper_book input {
+    background-color:#7FFF00;
+    margin:5px;
+    width:400px;
+    height:35px;
+    font-size:25px;
+    color:blue;
+    padding:3px;
+}
+
+.fieldWrapper_book input.checkbox {
+    margin:5px;
+    width:30px;
+    height:30px;
+    padding:10px;
+}
+
+
+/*大蓝按钮*/
+.button.fieldWrapper_book {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: blue;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 5px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 2px;
+}
+
+.button.log span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button.log span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button.log:hover span {
+  padding-right: 25px;
+}
+
+.button.log:hover span:after {
+  opacity: 1;
+  right: 0;
+}

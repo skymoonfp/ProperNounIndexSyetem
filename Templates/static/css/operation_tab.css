@@ -37,12 +37,12 @@
     display:inline-block; /* 将链接设为块级元素 */
     width:250px; /* 设置宽度 */
     height:100%; /* 设置高度 */
-    line-height:30px; /* 设置行高，将行高和高度设置同一个值，可以让单行文本垂直居中 */
+    line-height:60px; /* 设置行高，将行高和高度设置同一个值，可以让单行文本垂直居中 */
     text-align:center; /* 居中对齐文字 */
     background:#3A4953; /* 设置背景色 */
     color:red; /* 设置文字颜色 */
     font-family:'隶书';
-    font-size:28px;
+    font-size:56px;
     text-decoration:none; /* 去掉下划线 */
     border-right:1px solid #000; /* 在左侧加上分隔线 */
 }
@@ -51,12 +51,12 @@
     display:inline-block; /* 将链接设为块级元素 */
     width:250px; /* 设置宽度 */
     height:100%; /* 设置高度 */
-    line-height:30px; /* 设置行高，将行高和高度设置同一个值，可以让单行文本垂直居中 */
+    line-height:60px; /* 设置行高，将行高和高度设置同一个值，可以让单行文本垂直居中 */
     text-align:center; /* 居中对齐文字 */
     background:#D3D3D3; /* 设置背景色 */
     color:#696969; /* 设置文字颜色 */
     font-family:'宋体';
-    font-size:28px;
+    font-size:56px;
     text-decoration:none; /* 去掉下划线 */
     border-right:1px solid #000; /* 在左侧加上分隔线 */
 }
@@ -190,3 +190,94 @@
   right: 0;
 }
 
+
+
+/*次级按钮*/
+#tab-menu-title2 {
+    font:18px verdana, arial, sans-serif; /* 设置文字大小和字体样式 */
+
+}
+
+#tab-menu-title2, #tab-menu-title2 li {
+    list-style:none; /* 将默认的列表符号去掉 */
+    padding:0; /* 将默认的内边距去掉 */
+    margin:0 auto; /* 将默认的外边距去掉 */
+        margin-right:1px;
+    float: right; /* 往左浮动 */
+    display: block;
+}
+
+
+
+#tab-menu-title2 li.current button {
+    display:inline-block; /* 将链接设为块级元素 */
+    width:350px; /* 设置宽度 */
+    height:100%; /* 设置高度 */
+    line-height:20px; /* 设置行高，将行高和高度设置同一个值，可以让单行文本垂直居中 */
+    text-align:center; /* 居中对齐文字 */
+    background:#3A4953; /* 设置背景色 */
+    color:blue; /* 设置文字颜色 */
+    font-family:'隶书';
+    font-size:18px;
+    text-decoration:none; /* 去掉下划线 */
+    border-right:1px solid #000; /* 在左侧加上分隔线 */
+}
+
+#tab-menu-title2 li button {
+    display:inline-block; /* 将链接设为块级元素 */
+    width:150px; /* 设置宽度 */
+    height:100%; /* 设置高度 */
+    line-height:20px; /* 设置行高，将行高和高度设置同一个值，可以让单行文本垂直居中 */
+    text-align:center; /* 居中对齐文字 */
+    background:#D3D3D3; /* 设置背景色 */
+    color:#696969; /* 设置文字颜色 */
+    font-family:'楷体';
+    font-size:16px;
+    text-decoration:none; /* 去掉下划线 */
+    border-right:1px solid #000; /* 在左侧加上分隔线 */
+}
+
+#tab-menu-title2 li button:hover {
+    background:#146C9C; /* 变换背景色 */
+    color:grey; /* 变换文字颜色 */
+}
+
+#tab-menu-title2 li button.last {
+    border-right:0; /* 去掉左侧边框 */
+}
+
+#tab-menu-body2 {
+    border:2px solid white;
+    margin:0 auto;
+
+    height:100%;
+    width:100%;
+    float:left;
+    overflow:hidden;
+}
+
+#tab-menu-body2 label.log {
+    font-size:40px;
+    color:#0000CD;
+}
+
+#tab-menu-body2 input.log {
+    padding:5px;
+    width:300px;
+    font-size:25px;
+    color:grey;
+    font-style:italic;
+}
+
+#tab-menu-body2 label.reg {
+    font-size:30px;
+    color:#0000CD;
+}
+
+#tab-menu-body2 input.reg {
+    padding:2px;
+    width:300px;
+    font-size:18px;
+    color:grey;
+    font-style:italic;
+}

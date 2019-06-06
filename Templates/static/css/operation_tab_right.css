@@ -46,6 +46,7 @@
     font-size:20px;
     text-decoration:none; /* 去掉下划线 */
     border-right:1px solid #000; /* 在左侧加上分隔线 */
+    border-radius: 10px;
 }
 
 .tab-menu-box2 .tab-menu .menu-title li button {
@@ -60,6 +61,7 @@
     font-size:20px;
     text-decoration:none; /* 去掉下划线 */
     border-right:1px solid #000; /* 在左侧加上分隔线 */
+
 }
 
 .tab-menu-box2 .tab-menu .menu-title li button:hover {
@@ -106,11 +108,11 @@
 }
 
 
-/*大红按钮*/
-.button.log {
+/*大蓝按钮*/
+.button.books_input {
   display: inline-block;
   border-radius: 4px;
-  background-color: #f4511e;
+  background-color: blue
   border: none;
   color: #FFFFFF;
   text-align: center;

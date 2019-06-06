@@ -45,6 +45,7 @@
     font-size:80px;
     text-decoration:none; /* 去掉下划线 */
     border-right:1px solid #000; /* 在左侧加上分隔线 */
+    border-radius: 14px;
 }
 
 #tab-menu-title li button {
@@ -59,6 +60,7 @@
     font-size:80px;
     text-decoration:none; /* 去掉下划线 */
     border-right:1px solid #000; /* 在左侧加上分隔线 */
+    border-radius: 4px;
 }
 
 #tab-menu-title li button:hover {

@@ -3,6 +3,7 @@
 from django.http.response import HttpResponse
 from django.shortcuts import render
 
+from Main.forms import books
 from Main.models import *
 
 
@@ -93,9 +94,25 @@ def site_map(request, **kwargs):
     return HttpResponse("<h1>map</h1>")
 
 
-def books(request, **kwargs):
-    print(str(kwargs))
-    return HttpResponse("<h1>book</h1>")
+# 书籍录入
+def books_input(request, **kwargs):
+    booksInput = books.BooksInput(request.POST)
+
+    if request.method == "POST":
+
+        # booksInput = books.BooksInput(request.POST)
+
+        if booksInput.is_valid():
+            data = booksInput.cleaned_data
+            print(data)
+        else:
+            print(booksInput.errors)
+
+    else:
+
+        booksInput = books.BooksInput()
+
+    return render(request, "books_input.html", {"books_input": booksInput})
 
 
 def insert_data(request, **kwargs):

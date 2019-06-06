@@ -1,8 +1,19 @@
+$(function() {
+    ChangeTab("#search_menu_title", "#search_menu_body");
+})
 
+$(function() {
+    ChangeTab("#tool_menu_title", "#tool_menu_body");
+})
 
 $(function() {
     ChangeTab("#tab-menu-title", "#tab-menu-body");
 })
+
+$(function() {
+    ChangeTab("#tab-menu-title2", "#tab-menu-body2");
+})
+
 
 function ChangeTab(title, body) {
 

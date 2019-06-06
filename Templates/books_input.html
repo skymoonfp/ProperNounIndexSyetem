@@ -7,6 +7,8 @@
 
 <link href="/static/css/operation_tab.css" rel="stylesheet" type="text/css">
 <link href="/static/css/operation_tab_right.css" rel="stylesheet" type="text/css">
+<link href="/static/css/forms.css" rel="stylesheet" type="text/css">
+
 
 {% endblock %}
 
@@ -20,23 +22,23 @@
         <div class="tab-menu-box" style="">
             <div class="tab-menu">
                 <ul id="tab-menu-title">
-                    <li class="current" content-to="1">
+                    <li content-to="1">
                         <button id="search">查询</button>
                     </li>
-                    <li content-to="2">
+                    <li class="current" content-to="2">
                         <button id="input">录入</button>
                     </li>
                 </ul>
             </div>
 
             <div class="tab_content" id="tab-menu-body">
-                <div content="1">
+                <div class="hide" content="1">
                     <!--************* 查询区 *************-->
 
 
                     <!--************* 查询区 *************-->
                 </div>
-                <div class="hide" content="2">
+                <div content="2">
                     <!--************* 录入区 *************-->
                     <div>
                         <div class="tab-menu-box" style="">
@@ -54,8 +56,26 @@
                             <div class="tab_content" id="tab-menu-body2">
                                 <div content="1">
                                     <!--**** 书籍录入区 ****-->
+                                    <form action="/Main/books_input/" method="POST">
+                                        <p style="color:black;font-size:15px;font-family:'楷体';">
+                                            （勾选前面的复选框可以在刷新页面或者提交数据后保留该字段）</p>
 
+                                        {% for field in books_input %}
 
+                                        <div class="fieldWrapper_book">
+                                            {{ field.label_tag }}<br>
+                                            {{ field }}
+                                            <div><input class="checkbox" type="checkbox"></div>
+                                            {{ field.errors }}<p></p>
+
+                                        </div>
+                                        {% endfor %}
+
+                                        <button class="button fieldWrapper_book" onclick="submit"
+                                                style="margin-left:170px;vertical-align:middle;">
+                                            <span>确认</span>
+                                        </button>
+                                    </form>
                                     <!--**** 书籍录入区 ****-->
                                 </div>
                                 <div class="hide" content="2">
@@ -73,19 +93,15 @@
         </div>
     </div>
 
-
+    <br><br><br><br>
     <!--结果显示区-->
     <div>
 
-        <iframe>
-
-        </iframe>
+        结果显示区
     </div>
 
 
-
 </div>
-
 
 
 <div id="content_right2">
@@ -155,7 +171,6 @@
 
         </div>
     </div>
-
 
 
 </div>

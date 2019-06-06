@@ -11,7 +11,7 @@ class UserInfo(models.Model):
     e_mail = models.CharField(max_length=100, null=True)
     mobile = models.CharField(max_length=20, null=True)
     identify_code = models.CharField(max_length=20, null=True)
-    create_time = models.DateTimeField(auto_now_add=True)
+    create_time = models.DateTimeField(auto_now_add=True, editable=False)
     user_class = models.ForeignKey("UserClass", default=1, null=True, on_delete=models.SET_NULL)
 
 
@@ -26,7 +26,7 @@ class Books(models.Model):
     ISBN = models.CharField(max_length=20, null=True)
     edition = models.CharField(max_length=10, null=True)
     publication_date = models.CharField(max_length=6, null=True)
-    create_time = models.DateTimeField(auto_now_add=True)
+    create_time = models.DateTimeField(auto_now_add=True, editable=False)
 
 
 class ProperNounIndex(models.Model):
@@ -45,4 +45,4 @@ class ProperNounIndex(models.Model):
     relation = models.CharField(max_length=60, null=True)
     comment = models.CharField(max_length=60, null=True)
     context = models.TextField(null=True)
-    create_time = models.DateTimeField(auto_now_add=True)
+    create_time = models.DateTimeField(auto_now_add=True, editable=False)
