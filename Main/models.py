@@ -12,7 +12,7 @@ class UserInfo(models.Model):
     mobile = models.CharField(max_length=20, null=True)
     identify_code = models.CharField(max_length=20, null=True)
     create_time = models.DateTimeField(auto_now_add=True)
-    user_class = models.ForeignKey("UserClass", default="普通用户", null=True, on_delete=models.SET_NULL)
+    user_class = models.ForeignKey("UserClass", default=1, null=True, on_delete=models.SET_NULL)
 
 
 class UserClass(models.Model):

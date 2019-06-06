@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 {% extends "master/general.html" %}
 
 
@@ -20,17 +21,17 @@
     </div>
     <div style="margin:10px;text-align:center;">
         <a href="https://github.com/skymoonfp" target="iframe_a">心齋的GitHub</a>
-        </div>
     </div>
+</div>
 
 <div id="content_right">
     <div class="tab-menu-box" style="height:600px;">
         <div class="tab-menu">
             <ul id="tab-menu-title">
-                <li class="current" content-to="1">
+                <li content-to="1">
                     <button id="log">登陆</button>
                 </li>
-                <li content-to="2">
+                <li class="current" content-to="2">
                     <button id="reg">注册</button>
                 </li>
             </ul>
@@ -39,7 +40,7 @@
         <br><br>
 
         <div class="tab_content" id="tab-menu-body">
-            <div content="1">
+            <div class="hide" content="1">
                 <form action="/Main/login/" id="form_log" method="POST" name="form_log"
                       onsubmit="return CheckPost2('form_log');">
                     <br><br><br><br><br>
@@ -57,7 +58,7 @@
                     </center>
                 </form>
             </div>
-            <div class="hide" content="2">
+            <div content="2">
                 <form action="/Main/register/" id="form_reg" method="POST" name="form_reg"
                       onsubmit="return CheckPost('form_reg');">
                     <label class="reg" for="username_2">&nbsp;&nbsp;用户名&nbsp;&nbsp;</label>
@@ -97,7 +98,7 @@
                         style="color:red;">（选填）</a><br>
                     <a style="color:yellow;font-size:16px;">&nbsp;&nbsp;&nbsp;&nbsp;请输入18位身份证号</a><br>
                     <br>
-                    <div id="error_reg" style="text-align:center;font-size:20px;color:red;"></div>
+                    <div id="error" style="text-align:center;font-size:20px;color:red;"></div>
                     <div style="text-align:center;font-size:18px;color:red">{{erro_verify}}</div>
                     <center>
                         <button class="button reg" onclick="submit" style="vertical-align:middle;"><span>确认注册</span>
@@ -110,7 +111,6 @@
 
     <!--<div style="clear:both;"></div>-->
 </div>
-
 
 
 {% endblock %}

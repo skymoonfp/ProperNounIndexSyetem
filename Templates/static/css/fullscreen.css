@@ -93,6 +93,21 @@ a {
     width:55%;
 }
 
+/*躯干分区：二分*/
+#content_left2 {
+    margin:0 auto;
+    background-color:#FFD700;
+    float:left;
+    width:50%;
+}
+
+#content_right2 {
+    margin:0auto;
+    background-color:#EE82EE;
+    float:right;
+    width:50%;
+}
+
 /*躯干分区：三分*/
 #content_1 {
     margin:0 auto;

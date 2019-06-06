@@ -25,7 +25,7 @@ from ProperNounIndexSyetem.activator import process
 
 urlpatterns = [
 
-   url(r"^Main/index/(\w+)$", include("Main.urls")),
+    url(r"^Main/index/(\w+)/$", include("Main.urls")),
 
    url(r'^(?P<app>(\w+))/(?P<function>(\w+))/(?P<page>(\w+))/(?P<id>(\w+))/$', process),
    url(r'^(?P<app>(\w+))/(?P<function>(\w+))/(?P<id>(\w+))/$', process),
