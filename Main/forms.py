@@ -28,16 +28,10 @@ class ProperNounInput(forms.Form):
     book_name = forms.CharField(label="书名", max_length=100)
     ISBN = forms.CharField(label="ISBN", max_length=20, required=False)
     Noun = forms.CharField(label="专有名词", max_length=30)
-
     page = forms.CharField(label="页码", max_length=20)
-
-    property_CHOICE = (
-        (u'P', u'Person'),
-        (u'L', u'Location'),
-        (u'O', u'Other'),
-    )
-    noun_property = forms.CharField(label="专名属性（人名、地名、其他）", max_length=2, choices=property_CHOICE)
-
+    noun_property = forms.MultipleChoiceField(label="专名属性（人名、地名、其他）",
+                                              choices=[("P", "Person"), ("L", "Location"), ("O", "Other")],
+                                              widget=forms.CheckboxSelectMultiple)
     classes = forms.CharField(label="专名类别（如：河流、城市；神、政治家）", max_length=30, required=False)
     relation = forms.CharField(label="专名关系（如：XX的城市；XX的国王）", max_length=60, required=False)
     comment = forms.CharField(label="注释（如：长达50km；活了70岁）", max_length=60, required=False)

@@ -1,0 +1,51 @@
+{% extends "master/operation_page.html" %}
+
+
+{% block operation_page_head %}
+<title>&#9829;专名索引系统&#9829;-欢迎使用！&nbsp;&nbsp;</title>
+
+<link href="/static/css/operation_tab.css" rel="stylesheet" type="text/css">
+<link href="/static/css/operation_tab_right.css" rel="stylesheet" type="text/css">
+<link href="/static/css/form.css" rel="stylesheet" type="text/css">
+{% endblock %}
+
+
+{% block operation_page_body_main_searchorinput %}
+<li content-to="1">
+    <button id="search">查询</button>
+</li>
+<li class="current" content-to="2">
+    <button id="input">录入</button>
+</li>
+{% endblock %}
+
+
+{% block operation_page_body_main_search %}
+<div class="hide" content="1">
+    {% endblock %}
+
+
+    {% block operation_page_body_main_input %}
+    <div content="2">
+        {% endblock %}
+
+
+        {% block operation_page_body_main_bookornoun %}
+        <li content-to="1">
+            <button id="books">书&nbsp;&nbsp;籍</button>
+        </li>
+        <li class="current" content-to="2">
+            <button id="propernoun">专有名词</button>
+        </li>
+        {% endblock %}
+
+
+        {% block operation_page_body_main_book %}
+        <div class="hide" content="1">
+            {% endblock %}
+
+
+            {% block operation_page_body_main_noun %}
+            <div content="2">
+                {% endblock %}
+

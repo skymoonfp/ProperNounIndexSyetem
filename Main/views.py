@@ -120,6 +120,34 @@ def books_input(request, **kwargs):
     return render(request, "books_input.html", {"books_input": booksBack})
 
 
+# 专名录入
+def propernoun_input(request, **kwargs):
+    propernounBack = forms.ProperNounInput()
+    check = request.POST.getlist("book_input_check", "")
+
+    # 根据request.method决定是否传入数据库
+    if request.method == "POST":
+        data = {}
+        propernounInput = forms.ProperNounInput(request.POST)
+        if propernounInput.is_valid():
+            data = propernounInput.cleaned_data
+
+        # 根据复选框决定提交数据后的数据显示情况
+        for key in data.keys():
+            if key in check:
+                pass
+            else:
+                data[key] = ""
+        propernounBack = forms.ProperNounInput(data)
+
+        # 传入数据库
+        print(data)
+
+    return render(request, "propernoun_input.html", {"propernoun_input": propernounBack})
+
+
+
+
 def insert_data(request, **kwargs):
     pass
 

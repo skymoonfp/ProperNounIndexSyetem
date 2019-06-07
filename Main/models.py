@@ -42,7 +42,7 @@ class ProperNounIndex(models.Model):
         (u'L', u'Location'),
         (u'O', u'Other'),
     )
-    noun_property = models.CharField(max_length=2, choices=property_CHOICE)
+    noun_property = models.CharField(max_length=30, choices=property_CHOICE)
 
     classes = models.CharField(max_length=30, null=True)
     relation = models.CharField(max_length=60, null=True)
