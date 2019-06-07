@@ -2,37 +2,35 @@
 
 
 {% block operation_page_head %}
-<title>&#9829;专名索引系统&#9829;-专名录入！&nbsp;&nbsp;</title>
+<title>&#9829;专名索引系统&#9829;-查询！&nbsp;&nbsp;</title>
 {% endblock %}
 
 
 {% block operation_page_body_main_searchorinput %}
-<li content-to="search">
-    <a href="/Main/search/">
-        <button id="search">查询</button>
-    </a>
+<li class="current" content-to="search">
+    <button id="search">查询</button>
 </li>
-<li class="current" content-to="input">
-    <button id="input">录入</button>
+<li content-to="input">
+    <a href="/Main/propernoun_input/">
+        <button id="input">录入</button>
+    </a>
 </li>
 {% endblock %}
 
 
 {% block operation_page_body_main_search %}
-<div class="hide" content="search">
+<div content="search">
     {% endblock %}
 
 
     {% block operation_page_body_main_input %}
-    <div content="input">
+    <div class="hide" content="input">
         {% endblock %}
 
 
         {% block operation_page_body_main_bookornoun %}
         <li content-to="books_input">
-            <a href="/Main/books_input/">
-                <button id="books">书&nbsp;&nbsp;籍</button>
-            </a>
+            <button id="books">书&nbsp;&nbsp;籍</button>
         </li>
         <li class="current" content-to="propernoun_input">
             <button id="propernoun">专有名词</button>

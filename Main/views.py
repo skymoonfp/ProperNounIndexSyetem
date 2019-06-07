@@ -94,6 +94,11 @@ def site_map(request, **kwargs):
     return HttpResponse("<h1>map</h1>")
 
 
+# 查询
+def search(request, **kwargs):
+    return render(request, "search.html", locals())
+
+
 # 书籍录入
 def books_input(request, **kwargs):
     booksBack = forms.BooksInput()
@@ -144,12 +149,6 @@ def propernoun_input(request, **kwargs):
         print(data)
 
     return render(request, "propernoun_input.html", {"propernoun_input": propernounBack})
-
-
-
-
-def insert_data(request, **kwargs):
-    pass
 
 
 def test(request, **kwargs):

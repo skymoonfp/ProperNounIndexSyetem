@@ -2,255 +2,50 @@
 
 
 {% block operation_page_head %}
-
-<title>&#9829;专名索引系统&#9829;-欢迎使用！&nbsp;&nbsp;</title>
-
-<link href="/static/css/operation_tab.css" rel="stylesheet" type="text/css">
-<link href="/static/css/operation_tab_right.css" rel="stylesheet" type="text/css">
-<link href="/static/css/form.css" rel="stylesheet" type="text/css">
-
-
+<title>&#9829;专名索引系统&#9829;-书籍录入！&nbsp;&nbsp;</title>
 {% endblock %}
 
 
-{% block operation_page_body_main %}
-
-<div id="content_left2">
-
-    <!--输入区-->
-    <div>
-        <div class="tab-menu-box" style="">
-            <div class="tab-menu">
-                <ul id="tab-menu-title">
-                    <li content-to="1">
-                        <button id="search">查询</button>
-                    </li>
-                    <li class="current" content-to="2">
-                        <button id="input">录入</button>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="tab_content" id="tab-menu-body">
-                <div class="hide" content="1">
-                    <!--************* 查询区 *************-->
-
-
-                    <!--************* 查询区 *************-->
-                </div>
-                <div content="2">
-                    <!--************* 录入区 *************-->
-                    <div>
-                        <div class="tab-menu-box" style="">
-                            <div class="tab-menu">
-                                <ul id="tab-menu-title2">
-                                    <li class="current" content-to="1">
-                                        <button id="books">书&nbsp;&nbsp;籍</button>
-                                    </li>
-                                    <li content-to="2">
-                                        <button id="propernoun">专有名词</button>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="tab_content" id="tab-menu-body2">
-                                <div content="1">
-                                    <!--**** 书籍录入区 ****-->
-                                    <form action="/Main/books_input/" class="fieldWrapper_book" method="POST">
-                                        <div><a style="color:blue;font-size:25px;font-family:'黑体';">勾选所有</a><input
-                                                class="checkbox" id="book_input_checkall"
-                                                onclick="check('book_input_checkall', 'book_input_check');"
-                                                type="checkbox" value="1"><a
-                                                style="color:black;font-size:15px;font-family:'楷体';">
-                                            （勾选单个输入框前面的复选框可以在提交数据后保留该字段）</a></div>
-
-                                        {{ books_input.book_name.label_tag }}<br>
-                                        {{ books_input.book_name }}
-                                        <div><input class="checkbox" name="book_input_check" type="checkbox"
-                                                    value="book_name"></div>
-                                        {{ books_input.book_name.errors }}<p></p>
-
-                                        {{ books_input.author.label_tag }}<br>
-                                        {{ books_input.author }}
-                                        <div><input class="checkbox" name="book_input_check" type="checkbox"
-                                                    value="author"></div>
-                                        {{ books_input.author.errors }}<p></p>
-
-                                        {{ books_input.translator.label_tag }}<br>
-                                        {{ books_input.translator }}
-                                        <div><input class="checkbox" name="book_input_check" type="checkbox"
-                                                    value="translator"></div>
-                                        {{ books_input.translator.errors }}<p></p>
-
-                                        {{ books_input.ISBN.label_tag }}<br>
-                                        {{ books_input.ISBN }}
-                                        <div><input class="checkbox" name="book_input_check" type="checkbox"
-                                                    value="ISBN"></div>
-                                        {{ books_input.ISBN.errors }}<p></p>
-
-                                        {{ books_input.edition.label_tag }}<br>
-                                        {{ books_input.edition }}
-                                        <div><input class="checkbox" name="book_input_check" type="checkbox"
-                                                    value="edition"></div>
-                                        {{ books_input.edition.errors }}<p></p>
-
-                                        {{ books_input.publication_date.label_tag }}<br>
-                                        {{ books_input.publication_date }}
-                                        <div><input class="checkbox" name="book_input_check" type="checkbox"
-                                                    value="publication_date"></div>
-                                        {{ books_input.publication_date.errors }}<p></p>
-
-
-                                        <button class="button fieldWrapper_book" onclick="submit"
-                                                style="margin-left:170px;vertical-align:middle;">
-                                            <span>提交</span>
-                                        </button>
-                                    </form>
-                                    <!--**** 书籍录入区 ****-->
-                                </div>
-                                <div class="hide" content="2">
-                                    <!--**** 专有名词录入区 ****-->
-                                    <form action="/Main/propernoun_input/" class="fieldWrapper_noun" method="POST">
-                                        <div><a style="color:blue;font-size:25px;font-family:'黑体';">勾选所有</a><input
-                                                class="checkbox" id="noun_input_checkall"
-                                                onclick="check('noun_input_checkall', 'noun_input_check');"
-                                                type="checkbox" value="1"><a
-                                                style="color:black;font-size:15px;font-family:'楷体';">
-                                            （勾选单个输入框前面的复选框可以在提交数据后保留该字段）</a></div>
-
-                                        {{ books_input.book_name.label_tag }}<br>
-                                        {{ books_input.book_name }}
-                                        <div><input class="checkbox" name="noun_input_check" type="checkbox"
-                                                    value="book_name"></div>
-                                        {{ books_input.book_name.errors }}<p></p>
-
-                                        {{ books_input.author.label_tag }}<br>
-                                        {{ books_input.author }}
-                                        <div><input class="checkbox" name="noun_input_check" type="checkbox"
-                                                    value="author"></div>
-                                        {{ books_input.author.errors }}<p></p>
-
-                                        {{ books_input.translator.label_tag }}<br>
-                                        {{ books_input.translator }}
-                                        <div><input class="checkbox" name="noun_input_check" type="checkbox"
-                                                    value="translator"></div>
-                                        {{ books_input.translator.errors }}<p></p>
-
-                                        {{ books_input.ISBN.label_tag }}<br>
-                                        {{ books_input.ISBN }}
-                                        <div><input class="checkbox" name="noun_input_check" type="checkbox"
-                                                    value="ISBN"></div>
-                                        {{ books_input.ISBN.errors }}<p></p>
-
-                                        {{ books_input.edition.label_tag }}<br>
-                                        {{ books_input.edition }}
-                                        <div><input class="checkbox" name="noun_input_check" type="checkbox"
-                                                    value="edition"></div>
-                                        {{ books_input.edition.errors }}<p></p>
-
-                                        {{ books_input.publication_date.label_tag }}<br>
-                                        {{ books_input.publication_date }}
-                                        <div><input class="checkbox" name="noun_input_check" type="checkbox"
-                                                    value="publication_date"></div>
-                                        {{ books_input.publication_date.errors }}<p></p>
-
-
-                                        <button class="button fieldWrapper_noun" onclick="submit"
-                                                style="margin-left:170px;vertical-align:middle;">
-                                            <span>提交</span>
-                                        </button>
-                                    </form>
-                                    <!--**** 专有名词录入区 ****-->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--************* 录入区 *************-->
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <br><br><br><br>
-    <!--结果显示区-->
-    <div>
-
-        结果显示区
-    </div>
-
-
-</div>
-
-
-<div id="content_right2">
-    <!--搜索区-->
-    <div>
-        <div class="tab-menu-box2" id="search_menu" style="">
-
-            <div class="tab_content menu-body" id="search_menu_body">
-                <div content="1">
-                    <iframe></iframe>
-                </div>
-                <div class="hide" content="2">
-                    <iframe></iframe>
-                </div>
-                <div class="hide" content="3">
-                    <iframe></iframe>
-                </div>
-            </div>
-
-            <div class="tab-menu">
-                <ul class="menu-title" id="search_menu_title">
-                    <li class="current" content-to="1">
-                        <button id="log1">百度</button>
-                    </li>
-                    <li content-to="2">
-                        <button id="reg1">搜狗</button>
-                    </li>
-                    <li content-to="3">
-                        <button id="reg3">谷歌</button>
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
-
-
-    <!--工机具区-->
-    <div>
-        <div class="tab-menu-box2" id="tool_menu" style="">
-
-            <div class="tab_content menu-body" id="tool_menu_body">
-                <div content="1">
-                    <iframe></iframe>
-                </div>
-                <div class="hide" content="2">
-                    <iframe></iframe>
-                </div>
-                <div class="hide" content="3">
-                    <iframe></iframe>
-                </div>
-            </div>
-
-            <div class="tab-menu">
-                <ul class="menu-title" id="tool_menu_title">
-                    <li class="current" content-to="1">
-                        <button id="log13">字典</button>
-                    </li>
-                    <li content-to="2">
-                        <button id="reg13">文献</button>
-                    </li>
-                    <li content-to="3">
-                        <button id="reg33">其他</button>
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
-
-
-</div>
-
+{% block operation_page_body_main_searchorinput %}
+<li content-to="search">
+    <a href="/Main/search/">
+        <button id="search">查询</button>
+    </a>
+</li>
+<li class="current" content-to="input">
+    <button id="input">录入</button>
+</li>
 {% endblock %}
+
+
+{% block operation_page_body_main_search %}
+<div class="hide" content="search">
+    {% endblock %}
+
+
+    {% block operation_page_body_main_input %}
+    <div content="input">
+        {% endblock %}
+
+
+        {% block operation_page_body_main_bookornoun %}
+        <li class="current" content-to="books_input">
+            <button id="books">书&nbsp;&nbsp;籍</button>
+        </li>
+        <li content-to="propernoun_input">
+            <a href="/Main/propernoun_input/">
+                <button id="propernoun">专有名词</button>
+            </a>
+        </li>
+        {% endblock %}
+
+
+        {% block operation_page_body_main_book %}
+        <div content="books_input">
+            {% endblock %}
+
+
+            {% block operation_page_body_main_noun %}
+            <div class="hide" content="propernoun_input">
+{% endblock %}
+

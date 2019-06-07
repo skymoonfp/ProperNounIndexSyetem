@@ -1,0 +1,6 @@
+function PageGoto(id) {
+    $(id)
+
+
+
+}
