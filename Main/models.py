@@ -30,8 +30,11 @@ class Books(models.Model):
 
 
 class ProperNounIndex(models.Model):
-    Noun = models.CharField(max_length=30)
     book_name = models.CharField(max_length=100)
+    ISBN = models.CharField(max_length=20, null=True)
+
+    Noun = models.CharField(max_length=30)
+
     page = models.CharField(max_length=20)
 
     property_CHOICE = (

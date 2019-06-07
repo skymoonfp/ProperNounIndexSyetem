@@ -48,14 +48,14 @@
   margin: 2px;
 }
 
-.button.log span {
+.button.fieldWrapper_book span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
-.button.log span:after {
+.button.fieldWrapper_book span:after {
   content: '»';
   position: absolute;
   opacity: 0;
@@ -64,11 +64,11 @@
   transition: 0.5s;
 }
 
-.button.log:hover span {
+.button.fieldWrapper_book:hover span {
   padding-right: 25px;
 }
 
-.button.log:hover span:after {
+.button.fieldWrapper_book:hover span:after {
   opacity: 1;
   right: 0;
 }

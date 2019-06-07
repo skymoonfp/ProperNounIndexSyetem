@@ -1,19 +1,19 @@
-{% extends "master/general.html" %}
+{% extends "master/operation_page.html" %}
 
 
-{% block content_head %}
+{% block operation_page_head %}
 
 <title>&#9829;专名索引系统&#9829;-欢迎使用！&nbsp;&nbsp;</title>
 
 <link href="/static/css/operation_tab.css" rel="stylesheet" type="text/css">
 <link href="/static/css/operation_tab_right.css" rel="stylesheet" type="text/css">
-<link href="/static/css/forms.css" rel="stylesheet" type="text/css">
+<link href="/static/css/form.css" rel="stylesheet" type="text/css">
 
 
 {% endblock %}
 
 
-{% block content_body_main %}
+{% block operation_page_body_main %}
 
 <div id="content_left2">
 
@@ -56,32 +56,110 @@
                             <div class="tab_content" id="tab-menu-body2">
                                 <div content="1">
                                     <!--**** 书籍录入区 ****-->
-                                    <form action="/Main/books_input/" method="POST">
-                                        <p style="color:black;font-size:15px;font-family:'楷体';">
-                                            （勾选前面的复选框可以在刷新页面或者提交数据后保留该字段）</p>
+                                    <form action="/Main/books_input/" class="fieldWrapper_book" method="POST">
+                                        <div><a style="color:blue;font-size:25px;font-family:'黑体';">勾选所有</a><input
+                                                class="checkbox" id="book_input_checkall"
+                                                onclick="check('book_input_checkall', 'book_input_check');"
+                                                type="checkbox" value="1"><a
+                                                style="color:black;font-size:15px;font-family:'楷体';">
+                                            （勾选单个输入框前面的复选框可以在提交数据后保留该字段）</a></div>
 
-                                        {% for field in books_input %}
+                                        {{ books_input.book_name.label_tag }}<br>
+                                        {{ books_input.book_name }}
+                                        <div><input class="checkbox" name="book_input_check" type="checkbox"
+                                                    value="book_name"></div>
+                                        {{ books_input.book_name.errors }}<p></p>
 
-                                        <div class="fieldWrapper_book">
-                                            {{ field.label_tag }}<br>
-                                            {{ field }}
-                                            <div><input class="checkbox" type="checkbox"></div>
-                                            {{ field.errors }}<p></p>
+                                        {{ books_input.author.label_tag }}<br>
+                                        {{ books_input.author }}
+                                        <div><input class="checkbox" name="book_input_check" type="checkbox"
+                                                    value="author"></div>
+                                        {{ books_input.author.errors }}<p></p>
 
-                                        </div>
-                                        {% endfor %}
+                                        {{ books_input.translator.label_tag }}<br>
+                                        {{ books_input.translator }}
+                                        <div><input class="checkbox" name="book_input_check" type="checkbox"
+                                                    value="translator"></div>
+                                        {{ books_input.translator.errors }}<p></p>
+
+                                        {{ books_input.ISBN.label_tag }}<br>
+                                        {{ books_input.ISBN }}
+                                        <div><input class="checkbox" name="book_input_check" type="checkbox"
+                                                    value="ISBN"></div>
+                                        {{ books_input.ISBN.errors }}<p></p>
+
+                                        {{ books_input.edition.label_tag }}<br>
+                                        {{ books_input.edition }}
+                                        <div><input class="checkbox" name="book_input_check" type="checkbox"
+                                                    value="edition"></div>
+                                        {{ books_input.edition.errors }}<p></p>
+
+                                        {{ books_input.publication_date.label_tag }}<br>
+                                        {{ books_input.publication_date }}
+                                        <div><input class="checkbox" name="book_input_check" type="checkbox"
+                                                    value="publication_date"></div>
+                                        {{ books_input.publication_date.errors }}<p></p>
+
 
                                         <button class="button fieldWrapper_book" onclick="submit"
                                                 style="margin-left:170px;vertical-align:middle;">
-                                            <span>确认</span>
+                                            <span>提交</span>
                                         </button>
                                     </form>
                                     <!--**** 书籍录入区 ****-->
                                 </div>
                                 <div class="hide" content="2">
                                     <!--**** 专有名词录入区 ****-->
+                                    <form action="/Main/books_input/" class="fieldWrapper_book" method="POST">
+                                        <div><a style="color:blue;font-size:25px;font-family:'黑体';">勾选所有</a><input
+                                                class="checkbox" id="book_input_checkall"
+                                                onclick="check('book_input_checkall', 'book_input_check');"
+                                                type="checkbox" value="1"><a
+                                                style="color:black;font-size:15px;font-family:'楷体';">
+                                            （勾选单个输入框前面的复选框可以在提交数据后保留该字段）</a></div>
+
+                                        {{ books_input.book_name.label_tag }}<br>
+                                        {{ books_input.book_name }}
+                                        <div><input class="checkbox" name="book_input_check" type="checkbox"
+                                                    value="book_name"></div>
+                                        {{ books_input.book_name.errors }}<p></p>
+
+                                        {{ books_input.author.label_tag }}<br>
+                                        {{ books_input.author }}
+                                        <div><input class="checkbox" name="book_input_check" type="checkbox"
+                                                    value="author"></div>
+                                        {{ books_input.author.errors }}<p></p>
+
+                                        {{ books_input.translator.label_tag }}<br>
+                                        {{ books_input.translator }}
+                                        <div><input class="checkbox" name="book_input_check" type="checkbox"
+                                                    value="translator"></div>
+                                        {{ books_input.translator.errors }}<p></p>
+
+                                        {{ books_input.ISBN.label_tag }}<br>
+                                        {{ books_input.ISBN }}
+                                        <div><input class="checkbox" name="book_input_check" type="checkbox"
+                                                    value="ISBN"></div>
+                                        {{ books_input.ISBN.errors }}<p></p>
+
+                                        {{ books_input.edition.label_tag }}<br>
+                                        {{ books_input.edition }}
+                                        <div><input class="checkbox" name="book_input_check" type="checkbox"
+                                                    value="edition"></div>
+                                        {{ books_input.edition.errors }}<p></p>
+
+                                        {{ books_input.publication_date.label_tag }}<br>
+                                        {{ books_input.publication_date }}
+                                        <div><input class="checkbox" name="book_input_check" type="checkbox"
+                                                    value="publication_date"></div>
+                                        {{ books_input.publication_date.errors }}<p></p>
 
 
+                                        <button class="button fieldWrapper_book" onclick="submit"
+                                                style="margin-left:170px;vertical-align:middle;">
+                                            <span>提交</span>
+                                        </button>
+                                    </form>
                                     <!--**** 专有名词录入区 ****-->
                                 </div>
                             </div>

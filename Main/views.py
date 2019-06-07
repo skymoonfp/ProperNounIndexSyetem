@@ -3,7 +3,7 @@
 from django.http.response import HttpResponse
 from django.shortcuts import render
 
-from Main.forms import books
+from Main import forms
 from Main.models import *
 
 
@@ -96,23 +96,28 @@ def site_map(request, **kwargs):
 
 # 书籍录入
 def books_input(request, **kwargs):
-    booksInput = books.BooksInput(request.POST)
+    booksBack = forms.BooksInput()
+    check = request.POST.getlist("book_input_check", "")
 
+    # 根据request.method决定是否传入数据库
     if request.method == "POST":
-
-        # booksInput = books.BooksInput(request.POST)
-
+        data = {}
+        booksInput = forms.BooksInput(request.POST)
         if booksInput.is_valid():
             data = booksInput.cleaned_data
-            print(data)
-        else:
-            print(booksInput.errors)
 
-    else:
+        # 根据复选框决定提交数据后的数据显示情况
+        for key in data.keys():
+            if key in check:
+                pass
+            else:
+                data[key] = ""
+        booksBack = forms.BooksInput(data)
 
-        booksInput = books.BooksInput()
+        # 传入数据库
+        print(data)
 
-    return render(request, "books_input.html", {"books_input": booksInput})
+    return render(request, "books_input.html", {"books_input": booksBack})
 
 
 def insert_data(request, **kwargs):
