@@ -12,11 +12,11 @@ class UserInfo(models.Model):
     mobile = models.CharField(max_length=20, null=True)
     identify_code = models.CharField(max_length=20, null=True)
     create_time = models.DateTimeField(auto_now_add=True, editable=False)
-    user_class = models.ForeignKey("UserClass", default=1, null=True, on_delete=models.SET_NULL)
+    user_class = models.ForeignKey("UserClass", default="1", on_delete=models.SET_DEFAULT)
 
 
 class UserClass(models.Model):
-    user_class = models.CharField(max_length=50, unique=True)
+    user_class_name = models.CharField(max_length=50, unique=True)
 
 
 class Books(models.Model):
@@ -31,21 +31,17 @@ class Books(models.Model):
 
 class ProperNounIndex(models.Model):
     book_name = models.CharField(max_length=100)
-    ISBN = models.CharField(max_length=20, null=True)
-
+    ISBN = models.CharField(max_length=20)
     Noun = models.CharField(max_length=30)
-
     page = models.CharField(max_length=20)
-
-    property_CHOICE = (
-        (u'P', u'Person'),
-        (u'L', u'Location'),
-        (u'O', u'Other'),
-    )
-    noun_property = models.CharField(max_length=30, choices=property_CHOICE)
-
+    noun_property = models.ForeignKey("NounProperty", to_field="noun_property_id", null=True, on_delete=models.SET_NULL)
     classes = models.CharField(max_length=30, null=True)
     relation = models.CharField(max_length=60, null=True)
     comment = models.CharField(max_length=60, null=True)
     context = models.TextField(null=True)
     create_time = models.DateTimeField(auto_now_add=True, editable=False)
+
+
+class NounProperty(models.Model):
+    noun_property_id = models.IntegerField(primary_key=True, max_length=10, auto_created=True)
+    noun_property = models.CharField(max_length=20)

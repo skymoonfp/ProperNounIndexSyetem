@@ -49,3 +49,102 @@
             <div content="propernoun_input">
                 {% endblock %}
 
+                {% block operation_page_body_main_input_display %}
+                <div content="onehour">
+                    <table BORDER="1">
+                        <tr>
+                            <td>序号</td>
+                            <td>书名</td>
+                            <td>ISBN</td>
+                            <td>专有名词</td>
+                            <td>页码</td>
+                            <td>专名属性</td>
+                            <td>专名类别</td>
+                            <td>专名关系</td>
+                            <td>注释</td>
+                            <td>上下文</td>
+                            <td>创建时间</td>
+                        </tr>
+                        {% for item in onehourdata %}
+                        <tr>
+                            <td>{{item.id}}</td>
+                            <td>{{item.book_name}}</td>
+                            <td>{{item.ISBN}}</td>
+                            <td>{{item.Noun}}</td>
+                            <td>{{item.page}}</td>
+                            <td>{{item.noun_property}}</td>
+                            <td>{{item.classes}}</td>
+                            <td>{{relation}}</td>
+                            <td>{{comment}}</td>
+                            <td>{{context}}</td>
+                            <td>{{create_time|date:"Y-m-d H:i:s"}}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                    <div>删除</div>
+                </div>
+                <div class="hide" content="oneday">
+                    <table BORDER="1">
+                        <tr>
+                            <td>序号</td>
+                            <td>书名</td>
+                            <td>ISBN</td>
+                            <td>专有名词</td>
+                            <td>页码</td>
+                            <td>专名属性</td>
+                            <td>专名类别</td>
+                            <td>专名关系</td>
+                            <td>注释</td>
+                            <td>上下文</td>
+                            <td>创建时间</td>
+                        </tr>
+                        {% for item in onedaydata %}
+                        <tr>
+                            <td>{{item.id}}</td>
+                            <td>{{item.book_name}}</td>
+                            <td>{{item.ISBN}}</td>
+                            <td>{{item.Noun}}</td>
+                            <td>{{item.page}}</td>
+                            <td>{{item.noun_property}}</td>
+                            <td>{{item.classes}}</td>
+                            <td>{{relation}}</td>
+                            <td>{{comment}}</td>
+                            <td>{{context}}</td>
+                            <td>{{create_time|date:"Y-m-d H:i:s"}}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+                <div class="hide" content="thirtydays">
+                    <table BORDER="1">
+                        <tr>
+                            <td>序号</td>
+                            <td>书名</td>
+                            <td>ISBN</td>
+                            <td>专有名词</td>
+                            <td>页码</td>
+                            <td>专名属性</td>
+                            <td>专名类别</td>
+                            <td>专名关系</td>
+                            <td>注释</td>
+                            <td>上下文</td>
+                            <td>创建时间</td>
+                        </tr>
+                        {% for item in thirtydaysdata %}
+                        <tr>
+                            <td>{{item.id}}</td>
+                            <td>{{item.book_name}}</td>
+                            <td>{{item.ISBN}}</td>
+                            <td>{{item.Noun}}</td>
+                            <td>{{item.page}}</td>
+                            <td>{{item.noun_property}}</td>
+                            <td>{{item.classes}}</td>
+                            <td>{{relation}}</td>
+                            <td>{{comment}}</td>
+                            <td>{{context}}</td>
+                            <td>{{create_time|date:"Y-m-d H:i:s"}}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+                {% endblock %}

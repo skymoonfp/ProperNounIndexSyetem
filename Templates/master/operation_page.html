@@ -160,7 +160,10 @@
                                                 value="publication_date"></div>
                                     {{ books_input.publication_date.errors }}<p></p>
 
-
+                                    <div style="margin-left:200px;font-size:18px;color:red;font-weight;">
+                                        {{books_input_status}}
+                                    </div>
+                                    <br><br>
                                     <button class="button fieldWrapper_book" onclick="submit"
                                             style="margin-left:170px;vertical-align:middle;">
                                         <span>提交</span>
@@ -236,6 +239,10 @@
                                             value="context"></div>
                                 <p></p>
 
+                                <div style="margin-right:210px;font-size:18px;color:red;font-weight;">
+                                    {{nouns_input_status}}
+                                </div>
+                                <br><br>
                                 <button class="button fieldWrapper_noun" onclick="submit"
                                         style="margin-left:170px;vertical-align:middle;">
                                     <span>提交</span>
@@ -264,8 +271,27 @@
 
     <!--结果显示区-->
     <div>
-        结果显示区
-        <br><br><br><br><br><br><br><br>
+        <div class="tab-menu-box3" id="display_menu" style="">
+
+            <div class="tab_content menu-body" id="display_menu_body">
+                {% block operation_page_body_main_input_display %}
+                {% endblock %}
+            </div>
+
+            <div class="tab-menu">
+                <ul class="menu-title" id="display_menu_title">
+                    <li class="current" content-to="onehour">
+                        <button id="log122">1小时记录</button>
+                    </li>
+                    <li content-to="oneday">
+                        <button id="reg122">1天记录</button>
+                    </li>
+                    <li content-to="thirtydays">
+                        <button id="reg322">30天记录</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
     <!--结果显示区-->
 
@@ -275,26 +301,26 @@
         <div class="tab-menu-box2" id="search_menu" style="">
 
             <div class="tab_content menu-body" id="search_menu_body">
-                <div content="1">
+                <div content="baidu">
                     <iframe></iframe>
                 </div>
-                <div class="hide" content="2">
+                <div class="hide" content="sogou">
                     <iframe></iframe>
                 </div>
-                <div class="hide" content="3">
+                <div class="hide" content="google">
                     <iframe></iframe>
                 </div>
             </div>
 
             <div class="tab-menu">
                 <ul class="menu-title" id="search_menu_title">
-                    <li class="current" content-to="1">
+                    <li class="current" content-to="baidu">
                         <button id="log1">百度</button>
                     </li>
-                    <li content-to="2">
+                    <li content-to="sogou">
                         <button id="reg1">搜狗</button>
                     </li>
-                    <li content-to="3">
+                    <li content-to="google">
                         <button id="reg3">谷歌</button>
                     </li>
                 </ul>
@@ -310,26 +336,26 @@
         <div class="tab-menu-box2" id="tool_menu" style="">
 
             <div class="tab_content menu-body" id="tool_menu_body">
-                <div content="1">
+                <div content="zidian">
                     <iframe></iframe>
                 </div>
-                <div class="hide" content="2">
+                <div class="hide" content="wenxian">
                     <iframe></iframe>
                 </div>
-                <div class="hide" content="3">
+                <div class="hide" content="qita">
                     <iframe></iframe>
                 </div>
             </div>
 
             <div class="tab-menu">
                 <ul class="menu-title" id="tool_menu_title">
-                    <li class="current" content-to="1">
+                    <li class="current" content-to="zidian">
                         <button id="log13">字典</button>
                     </li>
-                    <li content-to="2">
+                    <li content-to="wenxian">
                         <button id="reg13">文献</button>
                     </li>
-                    <li content-to="3">
+                    <li content-to="qita">
                         <button id="reg33">其他</button>
                     </li>
                 </ul>

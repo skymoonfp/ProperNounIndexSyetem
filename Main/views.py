@@ -1,10 +1,12 @@
 # Create your views here.
 
+
 from django.http.response import HttpResponse
 from django.shortcuts import render
 
 from Main import forms
 from Main.models import *
+from Main.utility import *
 
 
 # 主页
@@ -103,6 +105,7 @@ def search(request, **kwargs):
 def books_input(request, **kwargs):
     booksBack = forms.BooksInput()
     check = request.POST.getlist("book_input_check", "")
+    return_dict = {"books_input": booksBack, "onehourdata": "", "onedaydata": "", "thirtydaysdata": ""}
 
     # 根据request.method决定是否传入数据库
     if request.method == "POST":
@@ -110,6 +113,9 @@ def books_input(request, **kwargs):
         booksInput = forms.BooksInput(request.POST)
         if booksInput.is_valid():
             data = booksInput.cleaned_data
+            print(data)
+            Books.objects.create(**data)
+            return_dict["books_input_status"] = "提交成功！"
 
         # 根据复选框决定提交数据后的数据显示情况
         for key in data.keys():
@@ -118,17 +124,27 @@ def books_input(request, **kwargs):
             else:
                 data[key] = ""
         booksBack = forms.BooksInput(data)
+        return_dict["books_input"] = booksBack
 
-        # 传入数据库
-        print(data)
+        # 查询最近1小时记录
+        onehourdata = data_search(table=Books, time_interval=60 * 60, start_time="", end_time="")
+        # 查询最近1天记录
+        onedaydata = data_search(table=Books, time_interval=60 * 60 * 24, start_time="", end_time="")
+        # 查询最近30天记录
+        thirtydaysdata = data_search(table=Books, time_interval=60 * 60 * 24 * 30, start_time="", end_time="")
 
-    return render(request, "books_input.html", {"books_input": booksBack})
+        return_dict["onehourdata"] = onehourdata
+        return_dict["onedaydata"] = onedaydata
+        return_dict["thirtydaysdata"] = thirtydaysdata
+
+    return render(request, "books_input.html", return_dict)
 
 
 # 专名录入
 def propernoun_input(request, **kwargs):
     propernounBack = forms.ProperNounInput()
     check = request.POST.getlist("book_input_check", "")
+    return_dict = {"propernoun_input": propernounBack}
 
     # 根据request.method决定是否传入数据库
     if request.method == "POST":
@@ -136,6 +152,9 @@ def propernoun_input(request, **kwargs):
         propernounInput = forms.ProperNounInput(request.POST)
         if propernounInput.is_valid():
             data = propernounInput.cleaned_data
+            print(data)
+            ProperNounIndex.objects.create(**data)
+            return_dict["nouns_input_status"] = "提交成功！"
 
         # 根据复选框决定提交数据后的数据显示情况
         for key in data.keys():
@@ -144,11 +163,21 @@ def propernoun_input(request, **kwargs):
             else:
                 data[key] = ""
         propernounBack = forms.ProperNounInput(data)
+        return_dict["propernoun_input"] = propernounBack
 
-        # 传入数据库
-        print(data)
+        # 查询最近1小时记录
+        onehourdata = data_search(table=ProperNounIndex, time_interval=60 * 60, start_time="", end_time="")
+        # 查询最近1天记录
+        onedaydata = data_search(table=ProperNounIndex, time_interval=60 * 60 * 24, start_time="", end_time="")
+        # 查询最近30天记录
+        thirtydaysdata = data_search(table=ProperNounIndex, time_interval=60 * 60 * 24 * 30, start_time="", end_time="")
 
-    return render(request, "propernoun_input.html", {"propernoun_input": propernounBack})
+        return_dict["onehourdata"] = onehourdata
+        return_dict["onedaydata"] = onedaydata
+        return_dict["thirtydaysdata"] = thirtydaysdata
+
+    return render(request, "propernoun_input.html", return_dict)
+
 
 
 def test(request, **kwargs):

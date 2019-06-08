@@ -12,12 +12,14 @@
 @author： skymoon
 """
 
+import time
+
 from django import template
 
 register = template.Library()
 
 
 @register.simple_tag
-def mymethod(v1):
-    result = v1 * 1000
-    return result
+def datetime_format(time_data):
+    time_return = time.strftime("%Y-%m-%d %H:%M:%S", time.strptime(time_data, "%b %d, %Y, %I:%M %p"))
+    return time_return

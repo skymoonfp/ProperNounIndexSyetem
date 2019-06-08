@@ -1,4 +1,8 @@
 $(function() {
+    ChangeTab("#display_menu_title", "#display_menu_body");
+})
+
+$(function() {
     ChangeTab("#search_menu_title", "#search_menu_body");
 })
 
@@ -13,6 +17,7 @@ $(function() {
 $(function() {
     ChangeTab("#tab-menu-title2", "#tab-menu-body2");
 })
+
 
 
 function ChangeTab(title, body) {

@@ -23,7 +23,7 @@ def process(request, **kwargs):
         print(e)
         return HttpResponse('404 Not Found')
     except Exception as e:
-        print(e)
+        print(Exception, e)
         # 代码执行异常时，自动跳转到指定页面
         return redirect('/Main/index/')
 

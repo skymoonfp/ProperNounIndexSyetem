@@ -108,6 +108,120 @@
 }
 
 
+
+
+
+
+.tab-menu-box3 {
+    height:100%;
+    width:100%;
+
+}
+
+.tab-menu-box3 .tab-menu {
+    height:100%;
+    width:10%;
+    background:white;
+    float:left;
+    overflow:hidden;
+}
+
+.tab-menu-box3 .tab-menu .menu-title {
+    font:20px verdana, arial, sans-serif; /* 设置文字大小和字体样式 */
+    padding:0; /* 将默认的内边距去掉 */
+    margin:0;
+        margin-top:2px;
+        margin-left:2px;
+}
+
+.tab-menu-box3 .tab-menu .menu-title li {
+    list-style:none; /* 将默认的列表符号去掉 */
+    padding:0; /* 将默认的内边距去掉 */
+    margin:0;
+        margin-top:2px;
+        margin-left:2px;
+    display: block;
+    float:left;
+}
+
+.tab-menu-box3 .tab-menu .menu-title li.current button {
+    display:inline-block; /* 将链接设为块级元素 */
+    width:40px; /* 设置宽度 */
+    height:130px; /* 设置高度 */
+    line-height:20px; /* 设置行高，将行高和高度设置同一个值，可以让单行文本垂直居中 */
+    text-align:center; /* 居中对齐文字 */
+    background:#4169E1; /* 设置背景色 */
+    color:#FFD700; /* 设置文字颜色 */
+    font-family:'隶书';
+    font-size:20px;
+    text-decoration:none; /* 去掉下划线 */
+    border-right:1px solid #000; /* 在左侧加上分隔线 */
+    border-radius: 5px;
+}
+
+.tab-menu-box3 .tab-menu .menu-title li button {
+    display:inline-block; /* 将链接设为块级元素 */
+    width:40px; /* 设置宽度 */
+    height:100px; /* 设置高度 */
+    line-height:20px; /* 设置行高，将行高和高度设置同一个值，可以让单行文本垂直居中 */
+    text-align:center; /* 居中对齐文字 */
+    background:#87CEFA; /* 设置背景色 */
+    color:#696969; /* 设置文字颜色 */
+    font-family:'宋体';
+    font-size:20px;
+    text-decoration:none; /* 去掉下划线 */
+    border-right:1px solid #000; /* 在左侧加上分隔线 */
+    border-radius: 3px;
+}
+
+.tab-menu-box3 .tab-menu .menu-title li button:hover {
+    background:#146C9C; /* 变换背景色 */
+    color:grey; /* 变换文字颜色 */
+}
+
+.tab-menu-box3 .tab-menu .menu-title li button.last {
+    border-right:0; /* 去掉左侧边框 */
+}
+
+.tab-menu-box3 .menu-body {
+    border:2px solid red;
+    margin:0 auto;
+    width:90%;
+    float:left;
+    overflow:hidden;
+}
+
+.tab-menu-box3 .menu-body label.log {
+    font-size:40px;
+    color:#0000CD;
+}
+
+.tab-menu-box3 .menu-body input.log {
+    padding:5px;
+    width:300px;
+    font-size:25px;
+    color:grey;
+    font-style:italic;
+}
+
+.tab-menu-box3 .menu-body label.reg {
+    font-size:30px;
+    color:#0000CD;
+}
+
+.tab-menu-box3 .menu-body input.reg {
+    padding:2px;
+    width:300px;
+    font-size:18px;
+    color:grey;
+    font-style:italic;
+}
+
+
+
+
+
+
 /*大蓝按钮*/
 .button.books_input {
   display: inline-block;
