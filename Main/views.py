@@ -179,6 +179,5 @@ def propernoun_input(request, **kwargs):
     return render(request, "propernoun_input.html", return_dict)
 
 
-
 def test(request, **kwargs):
     return render(request, "test.html", locals())

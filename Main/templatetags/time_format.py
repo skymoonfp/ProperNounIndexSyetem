@@ -12,7 +12,7 @@
 @author： skymoon
 """
 
-import time
+import datetime
 
 from django import template
 
@@ -21,5 +21,17 @@ register = template.Library()
 
 @register.simple_tag
 def datetime_format(time_data):
-    time_return = time.strftime("%Y-%m-%d %H:%M:%S", time.strptime(time_data, "%b %d, %Y, %I:%M %p"))
+    time_return = datetime.datetime.strftime(time_data, "%Y-%m-%d %H:%M:%S")
+    return time_return
+
+
+@register.simple_tag
+def datetime_format_hour(time_data):
+    time_return = datetime.datetime.strftime(time_data, "%H:%M:%S")
+    return time_return
+
+
+@register.simple_tag
+def datetime_format_month_day(time_data):
+    time_return = datetime.datetime.strftime(time_data, "%b %d %H:%M:%S")
     return time_return
