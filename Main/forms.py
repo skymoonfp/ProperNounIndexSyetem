@@ -16,8 +16,8 @@ from django import forms
 
 
 class BooksInput(forms.Form):
-    book_name = forms.CharField(label="书名", max_length=100)
-    author = forms.CharField(label="作者", max_length=50)
+    book_name = forms.CharField(label="书名", max_length=100, error_messages={"required": "书名不能为空！", "invalid": "书名格式错误"})
+    author = forms.CharField(label="作者", max_length=50, error_messages={"required": "作者不能为空！"})
     translator = forms.CharField(label="译者", max_length=50, required=False)
     ISBN = forms.CharField(label="ISBN", max_length=20, required=False)
     edition = forms.CharField(label="版本", max_length=10, required=False)
@@ -25,7 +25,7 @@ class BooksInput(forms.Form):
 
 
 class ProperNounInput(forms.Form):
-    book_name = forms.CharField(label="书名", max_length=100)
+    book_name = forms.CharField(label="书名", max_length=100, error_messages={"required": "书名不能为空！"})
     ISBN = forms.CharField(label="ISBN", max_length=20)
     Noun = forms.CharField(label="专有名词", max_length=30)
     page = forms.CharField(label="页码", max_length=20)

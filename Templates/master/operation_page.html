@@ -25,6 +25,7 @@
     <script src="/static/js/head.js" type="text/javascript"></script>
     <script src="/static/js/basic_tab.js" type="text/javascript"></script>
     <script src="/static/js/form.js" type="text/javascript"></script>
+    <script src="/static/js/page_show.js" type="text/javascript"></script>
 
     <script>
 
@@ -128,13 +129,13 @@
                                     {{ books_input.book_name }}
                                     <div><input class="checkbox" name="book_input_check" type="checkbox"
                                                 value="book_name"></div>
-                                    {{ books_input.book_name.errors }}<p></p>
+                                    {{ books_input.book_name.errors.as_ul }}<p></p>
 
                                     {{ books_input.author.label_tag }}<br>
                                     {{ books_input.author }}
                                     <div><input class="checkbox" name="book_input_check" type="checkbox"
                                                 value="author"></div>
-                                    {{ books_input.author.errors }}<p></p>
+                                    {{ books_input.author.errors.as_ul }}<p></p>
 
                                     {{ books_input.translator.label_tag }}<br>
                                     {{ books_input.translator }}

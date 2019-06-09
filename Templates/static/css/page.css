@@ -1,0 +1,12 @@
+.pageing a {
+    background-color:#008844;
+    border:1px solid white;
+    text-decoration:none;color:white;
+    padding:.1em .6em .2em .6em;
+
+}
+
+.pageing a.selected {
+    background-color:#AA7700;
+
+}

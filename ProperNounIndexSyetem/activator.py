@@ -9,6 +9,7 @@ def process(request, **kwargs):
 
     app = kwargs.get('app', None)
     function = kwargs.get('function', None)
+    print("路径分发：", kwargs)
 
     try:
         appObj = __import__("%s.views" % app)
