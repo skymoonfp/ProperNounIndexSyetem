@@ -14,6 +14,8 @@
 
 from django import forms
 
+from Main.models import *
+
 
 class BooksInput(forms.Form):
     book_name = forms.CharField(label="书名", max_length=100, error_messages={"required": "书名不能为空！", "invalid": "书名格式错误"})
@@ -24,15 +26,35 @@ class BooksInput(forms.Form):
     publication_date = forms.CharField(label="发行日期", max_length=6, required=False)
 
 
-class ProperNounInput(forms.Form):
-    book_name = forms.CharField(label="书名", max_length=100, error_messages={"required": "书名不能为空！"})
-    ISBN = forms.CharField(label="ISBN", max_length=20)
-    Noun = forms.CharField(label="专有名词", max_length=30)
-    page = forms.CharField(label="页码", max_length=20)
-    noun_property = forms.MultipleChoiceField(label="专名属性（人名、地名、其他）",
-                                              choices=[(1, "Person"), (2, "Location"), (3, "Other")],
-                                              widget=forms.RadioSelect)
-    classes = forms.CharField(label="专名类别（如：河流、城市；神、政治家）", max_length=30, required=False)
-    relation = forms.CharField(label="专名关系（如：XX的城市；XX的国王）", max_length=60, required=False)
-    comment = forms.CharField(label="注释（如：长达50km；活了70岁）", max_length=60, required=False)
-    context = forms.Field(label="上下文", required=False)
+class ProperNounInput(forms.ModelForm):
+    class Meta:
+        model = ProperNounIndex
+        fields = "__all__"
+        exclude = ("create_time", "noun_property")
+        labels = {
+            "book_name": "书名",
+            "ISBN": "ISBN",
+            "Noun": "专有名词",
+            "page": "页码",
+            "noun_property": "专名属性（人名、地名、其他）",
+            "classes": "专名类别（如：河流、城市；神、政治家）",
+            "relation": "专名关系（如：XX的城市；XX的国王）",
+            "comment": "注释（如：长达50km；活了70岁）",
+            "context": "上下文",
+        }
+        help_texts = None
+        widgets = {"noun_property": forms.CheckboxSelectMultiple()}
+        error_messages = {
+            "book_name": {"required": "书名不能为空！"},
+            "ISBN": {"required": "ISBN不能为空！"},
+            "Noun": {"required": "专名不能为空！"},
+            "page": {"required": "页码不能为空！"},
+        }
+        # choices = {"noun_property": ((1, "Person"), (2, "Location"), (3, "Other"))}
+
+    noun_property = forms.TypedChoiceField(label="专名属性（人名、地名、其他）",
+                                           choices=((1, "Person"), (2, "Location"), (3, "Other")),
+                                           widget=forms.RadioSelect)
+
+# choices={1: "Person", 2: "Location", 3: "Other"}
+# choices=((1, "Person"), (2, "Location"), (3, "Other"))

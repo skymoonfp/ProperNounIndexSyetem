@@ -1,6 +1,5 @@
 # Create your views here.
 
-
 from django.http.response import HttpResponse
 from django.shortcuts import render
 
@@ -8,6 +7,7 @@ from Main import forms
 from Main.models import *
 from Main.utility.html_helper import *
 from Main.utility.search_helper import *
+from Main.utility.transfer_helper import *
 
 
 # 主页
@@ -36,8 +36,8 @@ def login(request, **kwargs):
                 erro["erro_verify"] = r"密码错误！"
                 return render(request, "login.html", erro)
             else:
-                erro["erro_verify"] = r"登陆成功！5秒后跳转！"
-                return render(request, "operation.html", erro)
+                request.session["is_login"] = {'user': user}
+                return render(request, "books_input.html", locals())
 
     return render(request, "login.html", locals())
 
@@ -104,13 +104,25 @@ def search(request, **kwargs):
 
 # 书籍录入
 def books_input(request, **kwargs):
+    # login_data = request.session.get("is_login", None)
+    # if not login_data:
+    #     return render(request, "login.html", locals())
+    # else:
+    #     # 返回字典添加用户登陆信息
+    #     return_dict = {"user": login_data}
+
+    per_item_onehour = try_int(request.COOKIES.get("page_num_onehour", 10), 10)
+    per_item_oneday = try_int(request.COOKIES.get("page_num_oneday", 10), 10)
+    per_item_thirtydays = try_int(request.COOKIES.get("page_num_thirtydays", 10), 10)
+    time_interval = request.COOKIES.get("time_interval", "onehour")
+
     # 创建返回form对象
     booksBack = forms.BooksInput()
 
     # 获取checkbox值
     check = request.POST.getlist("book_input_check", "")
 
-    # 定义返回字典，初始化添加form对象
+    # 返回字典添加form对象
     return_dict = {"books_input": booksBack}
 
     # 根据request.method决定是否传入数据库
@@ -119,7 +131,7 @@ def books_input(request, **kwargs):
         booksInput = forms.BooksInput(request.POST)
         if booksInput.is_valid():
             data = booksInput.cleaned_data
-            print("输入数据：", data)
+            # print("输入数据：", data)
             Books.objects.create(**data)
             return_dict["books_input_status"] = "提交成功！"
 
@@ -153,7 +165,7 @@ def books_input(request, **kwargs):
     except Exception:
         page_url = "onehour_1"
 
-    print(page_url)
+    # print(page_url)
 
     # 分页
     # # 异步刷新
@@ -184,9 +196,10 @@ def books_input(request, **kwargs):
     #         return_dict["thirtydaysdata_page_count"] = str(thirtydays_page.start + 1) + "-" + str(thirtydays_page.over)
 
     # 同步刷新
-    onehour_page = PageInfo("/Main/books_input/", page_name_judge(page_url)[0], onehourdata_count, 12)
-    oneday_page = PageInfo("/Main/books_input/", page_name_judge(page_url)[1], onedaydata_count, 18)
-    thirtydays_page = PageInfo("/Main/books_input/", page_name_judge(page_url)[2], thirtydaysdata_count, 12)
+    onehour_page = PageInfo("/Main/books_input/", page_name_judge(page_url)[0], onehourdata_count, per_item_onehour)
+    oneday_page = PageInfo("/Main/books_input/", page_name_judge(page_url)[1], onedaydata_count, per_item_oneday)
+    thirtydays_page = PageInfo("/Main/books_input/", page_name_judge(page_url)[2], thirtydaysdata_count,
+                               per_item_thirtydays)
 
     # 返回字典中添加页码标签
     return_dict["page_onehour"] = onehour_page.pagify()
@@ -217,9 +230,17 @@ def books_input(request, **kwargs):
     # return_dict["onedaydata"] = onedaydata
     # return_dict["thirtydaysdata"] = thirtydaysdata
 
-    print(return_dict)
+    # print(return_dict)
 
-    return render(request, "books_input.html", return_dict)
+    response = render(request, "books_input.html", return_dict)
+
+    response.set_cookie("page_num_onehour", per_item_onehour)
+    response.set_cookie("page_num_oneday", per_item_oneday)
+    response.set_cookie("page_num_thirtydays", per_item_thirtydays)
+    response.set_cookie("time_interval", time_interval)
+    print(time_interval)
+
+    return response
 
 
 def page_show():

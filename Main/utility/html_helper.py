@@ -128,7 +128,10 @@ class PageInfo(object):
         page_html.append(post_html)
 
         # 尾页
-        last_html = "<a href='" + self.url + self.page_name + "_" + "%d/'>尾页</a>" % (self.all_pages,)
+        if self.all_pages == 0:
+            last_html = "<a href='#'>尾页</a>"
+        else:
+            last_html = "<a href='" + self.url + self.page_name + "_" + "%d/'>尾页</a>" % (self.all_pages,)
         page_html.append(last_html)
 
         # 分页html字符串

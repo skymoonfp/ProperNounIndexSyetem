@@ -78,10 +78,26 @@
                         </tr>
                         {% endfor %}
                     </table>
+                    <br>
                     <div class="pageing">
                         {{page_onehour}}
                     </div>
-                    <div>总条数：{{onehourdata_count}}，本页条数：{{onehourdata_page_count}}</div>
+                    <br>
+                    <div>
+                        <a>每页显示</a>
+                        <select id="s1" onchange="ChangePageItem(this, 'page_num_onehour');">
+                            <option value="5">5</option>
+                            <option value="8">8</option>
+                            <option value="12">12</option>
+                            <option value="18">18</option>
+                            <option value="30">30</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select>
+                        <a>条，</a>
+                        <a>总条数：{{onehourdata_count}}，本页显示{{onehourdata_page_count}}条</a>
+                    </div>
+                    <br>
                     <div><a href="/Main/books_input/onehour_1/">
                         <button>刷新</button>
                     </a></div>
@@ -112,10 +128,25 @@
                         </tr>
                         {% endfor %}
                     </table>
+                    <br>
                     <div class="pageing">
                         {{page_oneday}}
                     </div>
-                    <div>总条数：{{onedaydata_count}}，本页条数：{{onedaydata_page_count}}</div>
+                    <div><br>
+                        <a>每页显示</a>
+                        <select id="s2" onchange="ChangePageItem(this, 'page_num_oneday');">
+                            <option value="5">5</option>
+                            <option value="8">8</option>
+                            <option value="12">12</option>
+                            <option value="18">18</option>
+                            <option value="30">30</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select>
+                        <a>条，</a>
+                        <a>总条数：{{onedaydata_count}}，本页显示{{onedaydata_page_count}}条</a>
+                    </div>
+                    <br>
                     <div><a href="/Main/books_input/oneday_1/">
                         <button onclick="PageShow('/Main/books_input/oneday_1/');">刷新</button>
                     </a></div>
@@ -146,13 +177,30 @@
                         </tr>
                         {% endfor %}
                     </table>
+                    <br>
                     <div class="pageing">
                         {{page_thirtydays}}
                     </div>
-                    <div>总条数：{{thirtydaysdata_count}}，本页条数：{{thirtydaysdata_page_count}}</div>
+                    <br>
+                    <div>
+                        <a>每页显示</a>
+                        <select id="s3" onchange="ChangePageItem(this, 'page_num_thirtydays');">
+                            <option value="5">5</option>
+                            <option value="8">8</option>
+                            <option value="12">12</option>
+                            <option value="18">18</option>
+                            <option value="30">30</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select>
+                        <a>条，</a>
+                        <a>总条数：{{thirtydaysdata_count}}，本页显示{{thirtydaysdata_page_count}}条</a>
+                    </div>
+                    <br>
                     <div><a href="/Main/books_input/thirtydays_1/">
                         <button>刷新</button>
                     </a></div>
                     <div>删除</div>
                 </div>
                 {% endblock %}
+

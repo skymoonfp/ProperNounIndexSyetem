@@ -1,4 +1,4 @@
-"""ProperNounIndexSyetem URL Configuration
+"""ProperNounIndexSystem URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/dev/topics/http/urls/
@@ -20,8 +20,8 @@ from django.conf.urls import url, include
 from django.urls import re_path
 from django.views.static import serve
 
-from ProperNounIndexSyetem import settings
-from ProperNounIndexSyetem.activator import process
+from ProperNounIndexSystem import settings
+from ProperNounIndexSystem.activator import process
 
 urlpatterns = [
 

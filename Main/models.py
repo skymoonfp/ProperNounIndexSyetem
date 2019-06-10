@@ -34,7 +34,7 @@ class ProperNounIndex(models.Model):
     ISBN = models.CharField(max_length=20)
     Noun = models.CharField(max_length=30)
     page = models.CharField(max_length=20)
-    noun_property = models.ForeignKey("NounProperty", null=True, on_delete=models.SET_NULL)
+    noun_property = models.ForeignKey('NounProperty', to_field="id", null=True, on_delete=models.SET_NULL)
     classes = models.CharField(max_length=30, null=True)
     relation = models.CharField(max_length=60, null=True)
     comment = models.CharField(max_length=60, null=True)

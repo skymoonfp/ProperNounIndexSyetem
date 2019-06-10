@@ -1,1 +1,1 @@
-# ProperNounIndexSyetem
+# ProperNounIndexSystem
