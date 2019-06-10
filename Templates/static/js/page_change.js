@@ -1,3 +1,4 @@
+//books_input每页显示条数
 $(function(){
     var per_item = $.cookie("page_num_onehour");
     if(per_item){
@@ -32,3 +33,31 @@ function ChangePageItem(id, name){
 }
 
 
+
+//propernoun_input每页显示条数
+$(function(){
+    var per_item = $.cookie("page_num_onehour_propernoun");
+    if(per_item){
+        $('#s1_propernoun').val(per_item);
+    } else {
+        $.cookie("page_num_onehour_propernoun", 12, {path: '/'});
+    }
+})
+
+$(function(){
+    var per_item = $.cookie("page_num_oneday_propernoun");
+    if(per_item){
+        $('#s2_propernoun').val(per_item);
+    } else {
+        $.cookie("page_num_oneday", 18, {path: '/'});
+    }
+})
+
+$(function(){
+    var per_item = $.cookie("page_num_thirtydays_propernoun");
+    if(per_item){
+        $('#s3_propernoun').val(per_item);
+    } else {
+        $.cookie("page_num_thirtydays", 12, {path: '/'});
+    }
+})

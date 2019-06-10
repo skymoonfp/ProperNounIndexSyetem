@@ -3,6 +3,7 @@
 
 {% block operation_page_head %}
 <title>&#9829;专名索引系统&#9829;-专名录入！&nbsp;&nbsp;</title>
+<link href="/static/css/page.css" rel="stylesheet" type="text/css">
 {% endblock %}
 
 
@@ -65,7 +66,7 @@
                             <td>上下文</td>
                             <td>创建时间</td>
                         </tr>
-                        {% for item in onehourdata %}
+                        {% for item in onehourdata_propernoun %}
                         <tr>
                             <td>{{item.id}}</td>
                             <td>{{item.book_name}}</td>
@@ -74,13 +75,36 @@
                             <td>{{item.page}}</td>
                             <td>{{item.noun_property}}</td>
                             <td>{{item.classes}}</td>
-                            <td>{{relation}}</td>
-                            <td>{{comment}}</td>
-                            <td>{{context}}</td>
-                            <td>{{create_time|date:"H:i:s"}}</td>
+                            <td>{{item.relation}}</td>
+                            <td>{{item.comment}}</td>
+                            <td>{{item.context}}</td>
+                            <td>{{item.create_time|date:"H:i:s"}}</td>
                         </tr>
                         {% endfor %}
                     </table>
+                    <br>
+                    <div class="pageing">
+                        {{page_onehour_propernoun}}
+                    </div>
+                    <br>
+                    <div>
+                        <a>每页显示</a>
+                        <select id="s1_propernoun" onchange="ChangePageItem(this, 'page_num_onehour_propernoun');">
+                            <option value="5">5</option>
+                            <option value="8">8</option>
+                            <option value="12">12</option>
+                            <option value="18">18</option>
+                            <option value="30">30</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select>
+                        <a>条，</a>
+                        <a>总条数：{{onehourdata_count_propernoun}}，本页显示{{onehourdata_page_count_propernoun}}条</a>
+                    </div>
+                    <br>
+                    <div><a href="/Main/propernoun_input/onehour_1/">
+                        <button>刷新</button>
+                    </a></div>
                     <div>删除</div>
                 </div>
                 <div class="hide" content="oneday">
@@ -98,7 +122,7 @@
                             <td>上下文</td>
                             <td>创建时间</td>
                         </tr>
-                        {% for item in onedaydata %}
+                        {% for item in onedaydata_propernoun %}
                         <tr>
                             <td>{{item.id}}</td>
                             <td>{{item.book_name}}</td>
@@ -107,13 +131,36 @@
                             <td>{{item.page}}</td>
                             <td>{{item.noun_property}}</td>
                             <td>{{item.classes}}</td>
-                            <td>{{relation}}</td>
-                            <td>{{comment}}</td>
-                            <td>{{context}}</td>
-                            <td>{{create_time|date:"m-d H:i:s"}}</td>
+                            <td>{{item.relation}}</td>
+                            <td>{{item.comment}}</td>
+                            <td>{{item.context}}</td>
+                            <td>{{item.create_time|date:"m-d H:i:s"}}</td>
                         </tr>
                         {% endfor %}
                     </table>
+                    <br>
+                    <div class="pageing">
+                        {{page_oneday_propernoun}}
+                    </div>
+                    <div><br>
+                        <a>每页显示</a>
+                        <select id="s2_propernoun" onchange="ChangePageItem(this, 'page_num_oneday_propernoun');">
+                            <option value="5">5</option>
+                            <option value="8">8</option>
+                            <option value="12">12</option>
+                            <option value="18">18</option>
+                            <option value="30">30</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select>
+                        <a>条，</a>
+                        <a>总条数：{{onedaydata_count_propernoun}}，本页显示{{onedaydata_page_count_propernoun}}条</a>
+                    </div>
+                    <br>
+                    <div><a href="/Main/propernoun_input/oneday_1/">
+                        <button>刷新</button>
+                    </a></div>
+                    <div>删除</div>
                 </div>
                 <div class="hide" content="thirtydays">
                     <table BORDER="1">
@@ -130,7 +177,7 @@
                             <td>上下文</td>
                             <td>创建时间</td>
                         </tr>
-                        {% for item in thirtydaysdata %}
+                        {% for item in thirtydaysdata_propernoun %}
                         <tr>
                             <td>{{item.id}}</td>
                             <td>{{item.book_name}}</td>
@@ -139,12 +186,36 @@
                             <td>{{item.page}}</td>
                             <td>{{item.noun_property}}</td>
                             <td>{{item.classes}}</td>
-                            <td>{{relation}}</td>
-                            <td>{{comment}}</td>
-                            <td>{{context}}</td>
-                            <td>{{create_time|date:"Y-m-d H:i:s"}}</td>
+                            <td>{{item.relation}}</td>
+                            <td>{{item.comment}}</td>
+                            <td>{{item.context}}</td>
+                            <td>{{item.create_time|date:"Y-m-d H:i:s"}}</td>
                         </tr>
                         {% endfor %}
                     </table>
+                    <br>
+                    <div class="pageing">
+                        {{page_thirtydays_propernoun}}
+                    </div>
+                    <br>
+                    <div>
+                        <a>每页显示</a>
+                        <select id="s3_propernoun" onchange="ChangePageItem(this, 'page_num_thirtydays_propernoun');">
+                            <option value="5">5</option>
+                            <option value="8">8</option>
+                            <option value="12">12</option>
+                            <option value="18">18</option>
+                            <option value="30">30</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select>
+                        <a>条，</a>
+                        <a>总条数：{{thirtydaysdata_count_propernoun}}，本页显示{{thirtydaysdata_page_count_propernoun}}条</a>
+                    </div>
+                    <br>
+                    <div><a href="/Main/propernoun_input/thirtydays_1/">
+                        <button>刷新</button>
+                    </a></div>
+                    <div>删除</div>
                 </div>
                 {% endblock %}

@@ -30,7 +30,7 @@ class ProperNounInput(forms.ModelForm):
     class Meta:
         model = ProperNounIndex
         fields = "__all__"
-        exclude = ("create_time", "noun_property")
+        exclude = ("create_time",)
         labels = {
             "book_name": "书名",
             "ISBN": "ISBN",
@@ -43,18 +43,24 @@ class ProperNounInput(forms.ModelForm):
             "context": "上下文",
         }
         help_texts = None
-        widgets = {"noun_property": forms.CheckboxSelectMultiple()}
+        widgets = {"noun_property": forms.RadioSelect()}
         error_messages = {
             "book_name": {"required": "书名不能为空！"},
             "ISBN": {"required": "ISBN不能为空！"},
             "Noun": {"required": "专名不能为空！"},
             "page": {"required": "页码不能为空！"},
         }
+
+    def __init__(self, *args, **kwargs):
+        super(ProperNounInput, self).__init__(*args, **kwargs)
+        self.fields["classes"].required = False
+        self.fields["relation"].required = False
+        self.fields["comment"].required = False
+        self.fields["context"].required = False
+
         # choices = {"noun_property": ((1, "Person"), (2, "Location"), (3, "Other"))}
 
-    noun_property = forms.TypedChoiceField(label="专名属性（人名、地名、其他）",
-                                           choices=((1, "Person"), (2, "Location"), (3, "Other")),
-                                           widget=forms.RadioSelect)
+    # noun_property = forms.TypedChoiceField(label="专名属性（人名、地名、其他）", choices=((1, "Person"), (2, "Location"), (3, "Other")), widget=forms.RadioSelect)
 
 # choices={1: "Person", 2: "Location", 3: "Other"}
 # choices=((1, "Person"), (2, "Location"), (3, "Other"))

@@ -14,3 +14,17 @@ function check(checkboxall_id, checkbox_name){
 }}
 
 
+
+//ModelForm选择框格式内容
+$(function(){
+    ChangeModelForm("#id_noun_property");
+})
+
+function ChangeModelForm(id) {
+    //$(id).find("label[for='id_noun_property_0']").addClass("hide");
+    $(id).find("label[for='id_noun_property_0']").html("");
+    $(id).find("label[for='id_noun_property_1']").html('人名<input name="noun_property" id="id_noun_property_1" required="" type="radio" value="1">');
+    $(id).find("label[for='id_noun_property_2']").html('地名<input name="noun_property" id="id_noun_property_2" required="" type="radio" value="2">');
+    $(id).find("label[for='id_noun_property_3']").html('其他<input name="noun_property" id="id_noun_property_3" required="" type="radio" value="3">');
+}
+
