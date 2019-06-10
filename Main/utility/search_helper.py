@@ -42,10 +42,22 @@ def data_search(**kwargs):
         start_time = end_time - datetime.timedelta(seconds=time_interval)
 
     return_data = table.objects.filter(create_time__range=(start_time, end_time)).order_by("-create_time")
-    # print(return_data)
     return return_data
 
 
 def data_search_count(data_search_return):
     count = data_search_return.count()
     return count
+
+# def proper_noun_data_search(**kwargs):
+#
+#     return_data = data_search(**kwargs)
+#     return_data_r = []
+#
+#     for item in return_data:
+#         item_dict = dict()
+#         item_dict["ProperNounIndex"] = item
+#         item_dict["noun_property_name"] = item.noun_property.noun_property_name
+#         return_data_r.append(item_dict)
+#
+#     return return_data_r

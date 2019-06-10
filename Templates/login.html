@@ -6,7 +6,6 @@
 <title>&#9829;专名索引系统&#9829;-欢迎登陆/注册！&nbsp;&nbsp;</title>
 
 <link href="/static/css/basic_tab.css" rel="stylesheet" type="text/css">
-<link href="/static/css/input.css" rel="stylesheet" type="text/css">
 
 {% endblock %}
 
@@ -14,17 +13,22 @@
 {% block content_body_main %}
 
 <div id="content_left">
-    <div style="margin:10px;">
-        <iframe frameborder="1" height="545" name="iframe_a" sandbox="allow-scripts" src="/static/image/login/001.png"
+    <div style="margin:10px;height:100%;">
+        <iframe frameborder="1" name="iframe_a" sandbox="allow-scripts" src="/static/image/login/001.png"
+                style="height:300px;"
                 width=100%></iframe>
     </div>
     <div style="margin:10px;text-align:center;">
         <a href="https://github.com/skymoonfp" target="iframe_a">心齋的GitHub</a>
-        </div>
     </div>
+    <div style="height:100%;">
+        <textarea placeholder="留言板"
+                  style="margin:10px;padding:10px;clear:both;width:95%;height:200px;color:red;font-size:24px;"></textarea>
+    </div>
+</div>
 
-<div id="content_right">
-    <div class="tab-menu-box" style="height:600px;">
+<div id="content_right" style="height:100%;">
+    <div class="tab-menu-box" style="height:100%;">
         <div class="tab-menu">
             <ul id="tab-menu-title">
                 <li class="current" content-to="1">
@@ -42,7 +46,7 @@
             <div content="1">
                 <form action="/Main/login/" id="form_log" method="POST" name="form_log"
                       onsubmit="return CheckPost2('form_log');">
-                    <br><br><br><br><br>
+                    <br><br><br><br><br><br><br><br>
                     <label class="log" for="username_1">&nbsp;&nbsp;用户名&nbsp;&nbsp;</label>
                     <input class="username_log log" id="username_1" name="username_1" type="text"><br>
                     <br><br><br>

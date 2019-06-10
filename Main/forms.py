@@ -64,3 +64,4 @@ class ProperNounInput(forms.ModelForm):
 
 # choices={1: "Person", 2: "Location", 3: "Other"}
 # choices=((1, "Person"), (2, "Location"), (3, "Other"))
+

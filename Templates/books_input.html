@@ -83,7 +83,7 @@
                         {{page_onehour}}
                     </div>
                     <br>
-                    <div>
+                    <div style="float:left;padding-top:4px;">
                         <a>每页显示</a>
                         <select id="s1" onchange="ChangePageItem(this, 'page_num_onehour');">
                             <option value="5">5</option>
@@ -97,11 +97,17 @@
                         <a>条，</a>
                         <a>总条数：{{onehourdata_count}}，本页显示{{onehourdata_page_count}}条</a>
                     </div>
-                    <br>
-                    <div><a href="/Main/books_input/onehour_1/">
+                    <div style="float:left;margin-left:10px;"><a href="/Main/books_input/onehour_1/">
                         <button>刷新</button>
                     </a></div>
-                    <div>删除</div>
+                    <br><br><br>
+                    <div style="clear:left;margin-left:50px;">
+                        <form action="/Main/books_input/" method="POST">
+                            <a style="color:red;">删除&nbsp;&nbsp;</a>第<input style="width:50px;">条&nbsp;&nbsp;<button
+                                style="color:red;">确认删除
+                        </button>
+                        </form>
+                    </div>
                 </div>
                 <div class="hide" content="oneday">
                     <table BORDER="1">
@@ -132,7 +138,8 @@
                     <div class="pageing">
                         {{page_oneday}}
                     </div>
-                    <div><br>
+                    <br>
+                    <div style="float:left;padding-top:4px;">
                         <a>每页显示</a>
                         <select id="s2" onchange="ChangePageItem(this, 'page_num_oneday');">
                             <option value="5">5</option>
@@ -146,11 +153,17 @@
                         <a>条，</a>
                         <a>总条数：{{onedaydata_count}}，本页显示{{onedaydata_page_count}}条</a>
                     </div>
-                    <br>
-                    <div><a href="/Main/books_input/oneday_1/">
+                    <div style="float:left;margin-left:10px;"><a href="/Main/books_input/oneday_1/">
                         <button>刷新</button>
                     </a></div>
-                    <div>删除</div>
+                    <br><br><br>
+                    <div style="clear:left;margin-left:50px;">
+                        <form action="/Main/books_input/" method="POST">
+                            <a style="color:red;">删除&nbsp;&nbsp;</a>第<input style="width:50px;">条&nbsp;&nbsp;<button
+                                style="color:red;">确认删除
+                        </button>
+                        </form>
+                    </div>
                 </div>
                 <div class="hide" content="thirtydays">
                     <table BORDER="1">
@@ -182,7 +195,7 @@
                         {{page_thirtydays}}
                     </div>
                     <br>
-                    <div>
+                    <div style="float:left;padding-top:4px;">
                         <a>每页显示</a>
                         <select id="s3" onchange="ChangePageItem(this, 'page_num_thirtydays');">
                             <option value="5">5</option>
@@ -196,11 +209,17 @@
                         <a>条，</a>
                         <a>总条数：{{thirtydaysdata_count}}，本页显示{{thirtydaysdata_page_count}}条</a>
                     </div>
-                    <br>
-                    <div><a href="/Main/books_input/thirtydays_1/">
+                    <div style="float:left;margin-left:10px;"><a href="/Main/books_input/thirtydays_1/">
                         <button>刷新</button>
                     </a></div>
-                    <div>删除</div>
+                    <br><br><br>
+                    <div style="clear:left;margin-left:50px;">
+                        <form action="/Main/books_input/" method="POST">
+                            <a style="color:red;">删除&nbsp;&nbsp;</a>第<input style="width:50px;">条&nbsp;&nbsp;<button
+                                style="color:red;">确认删除
+                        </button>
+                        </form>
+                    </div>
                 </div>
                 {% endblock %}
 

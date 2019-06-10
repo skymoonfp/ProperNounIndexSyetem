@@ -44,3 +44,6 @@ class ProperNounIndex(models.Model):
 
 class NounProperty(models.Model):
     noun_property_name = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.noun_property_name

@@ -1,12 +1,11 @@
 # Create your views here.
 
-from django.http.response import HttpResponse
-from django.shortcuts import render
+from django.http.response import *
 
 from Main import forms
-from Main.models import *
 from Main.utility.html_helper import *
 from Main.utility.search_helper import *
+from Main.utility.session_helper import *
 from Main.utility.transfer_helper import *
 
 
@@ -26,7 +25,7 @@ def login(request, **kwargs):
         erro = {}
 
         userinfo = UserInfo.objects.filter(username=user)
-        print(userinfo)
+        # print(userinfo)
         if len(userinfo) != 1:
             erro["erro_verify"] = r"该用户不存在！请注册！"
             return render(request, "login.html", erro)
@@ -36,8 +35,10 @@ def login(request, **kwargs):
                 erro["erro_verify"] = r"密码错误！"
                 return render(request, "login.html", erro)
             else:
-                request.session["is_login"] = {'user': user}
-                return render(request, "books_input.html", locals())
+                request.session["userinfo"] = {"is_login": True, "user": user, "pwd": pwd}
+                print("session的值", request.session.get("userinfo"))
+                # erro["erro_verify"] = mark_safe("<button><a herf='/Main/books_input/'>请进入操作页面！</a></button>")
+                return render(request, "books_input.html", erro)
 
     return render(request, "login.html", locals())
 
@@ -98,18 +99,26 @@ def site_map(request, **kwargs):
 
 
 # 查询
-def search(request, **kwargs):
+# @login_session
+def search(request, *args, **kwargs):
     return render(request, "search.html", locals())
 
 
 # 书籍录入
-def books_input(request, **kwargs):
-    # login_data = request.session.get("is_login", None)
-    # if not login_data:
-    #     return render(request, "login.html", locals())
+@login_session
+def books_input(request, *args, **kwargs):
+    # userinfo = request.session.get("userinfo", None)
+    # print("aaa", userinfo)
+    # if userinfo["is_login"]:
+    #     pass
     # else:
-    #     # 返回字典添加用户登陆信息
-    #     return_dict = {"user": login_data}
+    #     print("错误")
+
+    print("bbb", request.session, request.session.session_key)
+    print("session的值", request.session.get("userinfo"))
+    userinfo = request.session.get("userinfo", None)
+    # print(userinfo)
+    return_dict = {"user": userinfo["user"]}
 
     per_item_onehour = try_int(request.COOKIES.get("page_num_onehour", 10), 10)
     per_item_oneday = try_int(request.COOKIES.get("page_num_oneday", 10), 10)
@@ -123,7 +132,8 @@ def books_input(request, **kwargs):
     check = request.POST.getlist("book_input_check", "")
 
     # 返回字典添加form对象
-    return_dict = {"books_input": booksBack}
+    # return_dict = dict()
+    return_dict["books_input"] = booksBack
 
     # 根据request.method决定是否传入数据库
     if request.method == "POST":
@@ -244,6 +254,7 @@ def books_input(request, **kwargs):
 
 
 # 专名录入
+# @login_session
 def propernoun_input(request, **kwargs):
     per_item_onehour_propernoun = try_int(request.COOKIES.get("page_num_onehour_propernoun", 10), 10)
     per_item_oneday_propernoun = try_int(request.COOKIES.get("page_num_oneday_propernoun", 10), 10)
@@ -280,9 +291,11 @@ def propernoun_input(request, **kwargs):
 
     # 查询最近1小时记录
     onehourdata_propernoun = data_search(table=ProperNounIndex, time_interval=60 * 60)
+    print(onehourdata_propernoun)
     onehourdata_count_propernoun = data_search_count(onehourdata_propernoun)
     # 查询最近1天记录
     onedaydata_propernoun = data_search(table=ProperNounIndex, time_interval=60 * 60 * 24)
+    print(onedaydata_propernoun)
     onedaydata_count_propernoun = data_search_count(onedaydata_propernoun)
     # 查询最近30天记录
     thirtydaysdata_propernoun = data_search(table=ProperNounIndex, time_interval=60 * 60 * 24 * 30)
@@ -351,5 +364,6 @@ def propernoun_input(request, **kwargs):
     return response
 
 
+# @login_session
 def test(request, **kwargs):
     return render(request, "test.html", locals())
