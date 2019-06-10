@@ -3,6 +3,7 @@
 from django.http.response import *
 
 from Main import forms
+from Main.models import *
 from Main.utility.html_helper import *
 from Main.utility.search_helper import *
 from Main.utility.session_helper import *
@@ -99,10 +100,12 @@ def site_map(request, **kwargs):
 
 
 # 查询
-# @login_session
+@login_session
 def search(request, *args, **kwargs):
-    return render(request, "search.html", locals())
+    userinfo = request.session.get("userinfo", None)
+    return_dict = {"user": userinfo["user"]}
 
+    return render(request, "search.html", return_dict)
 
 # 书籍录入
 @login_session
@@ -114,10 +117,10 @@ def books_input(request, *args, **kwargs):
     # else:
     #     print("错误")
 
-    print("bbb", request.session, request.session.session_key)
-    print("session的值", request.session.get("userinfo"))
+    # print("bbb", request.session, request.session.session_key)
+    # print("session的值", request.session.get("userinfo"))
+
     userinfo = request.session.get("userinfo", None)
-    # print(userinfo)
     return_dict = {"user": userinfo["user"]}
 
     per_item_onehour = try_int(request.COOKIES.get("page_num_onehour", 10), 10)
@@ -254,8 +257,11 @@ def books_input(request, *args, **kwargs):
 
 
 # 专名录入
-# @login_session
+@login_session
 def propernoun_input(request, **kwargs):
+    userinfo = request.session.get("userinfo", None)
+    return_dict = {"user": userinfo["user"]}
+
     per_item_onehour_propernoun = try_int(request.COOKIES.get("page_num_onehour_propernoun", 10), 10)
     per_item_oneday_propernoun = try_int(request.COOKIES.get("page_num_oneday_propernoun", 10), 10)
     per_item_thirtydays_propernoun = try_int(request.COOKIES.get("page_num_thirtydays_propernoun", 10), 10)
@@ -268,7 +274,7 @@ def propernoun_input(request, **kwargs):
     check = request.POST.getlist("propernounBack_input_check", "")
 
     # 返回字典添加form对象
-    return_dict = {"propernoun_input": propernounBack}
+    return_dict["propernoun_input"] = propernounBack
 
     # 根据request.method决定是否传入数据库
     if request.method == "POST":
@@ -364,6 +370,6 @@ def propernoun_input(request, **kwargs):
     return response
 
 
-# @login_session
+@login_session
 def test(request, **kwargs):
     return render(request, "test.html", locals())
