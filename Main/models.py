@@ -14,9 +14,18 @@ class UserInfo(models.Model):
     create_time = models.DateTimeField(auto_now_add=True, editable=False)
     user_class = models.ForeignKey("UserClass", null=True, on_delete=models.SET_NULL)
 
+    class Meta:
+        verbose_name_plural = "用户信息表"
+
 
 class UserClass(models.Model):
     user_class_name = models.CharField(max_length=50, unique=True)
+
+    def __str__(self):
+        return self.user_class_name
+
+    class Meta:
+        verbose_name_plural = "用户类型表"
 
 
 class Books(models.Model):
@@ -27,6 +36,9 @@ class Books(models.Model):
     edition = models.CharField(max_length=10, null=True)
     publication_date = models.CharField(max_length=6, null=True)
     create_time = models.DateTimeField(auto_now_add=True, editable=False)
+
+    class Meta:
+        verbose_name_plural = "书籍表"
 
 
 class ProperNounIndex(models.Model):
@@ -41,9 +53,15 @@ class ProperNounIndex(models.Model):
     context = models.TextField(null=True)
     create_time = models.DateTimeField(auto_now_add=True, editable=False)
 
+    class Meta:
+        verbose_name_plural = "专名表"
+
 
 class NounProperty(models.Model):
     noun_property_name = models.CharField(max_length=20)
 
     def __str__(self):
         return self.noun_property_name
+
+    class Meta:
+        verbose_name_plural = "专名属性表"
