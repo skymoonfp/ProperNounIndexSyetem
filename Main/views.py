@@ -12,40 +12,54 @@ from Main.utility.transfer_helper import *
 
 # 主页
 def index(request, **kwargs):
-    return render(request, "index.html", locals())
+    if request.session.session_key:
+        userinfo = request.session.get("userinfo", None)
+        return_dict = {"user": userinfo["user"]}
+    else:
+        return_dict = {}
+
+    return render(request, "index.html", return_dict)
 
 
 # 登陆
 def login(request, **kwargs):
+    if request.session.session_key:
+        userinfo = request.session.get("userinfo", None)
+        return_dict = {"user": userinfo["user"]}
+    else:
+        return_dict = {}
 
     if request.method == "POST":
         user = request.POST.get("username_1", None)
         pwd = request.POST.get("password_1", None)
         print(user, pwd)
 
-        erro = {}
-
         userinfo = UserInfo.objects.filter(username=user)
         # print(userinfo)
         if len(userinfo) != 1:
-            erro["erro_verify"] = r"该用户不存在！请注册！"
-            return render(request, "login.html", erro)
+            return_dict["erro_verify"] = r"该用户不存在！请注册！"
+            return render(request, "login.html", return_dict)
         else:
             userinfo = UserInfo.objects.filter(username=user, password=pwd)
             if len(userinfo) == 0:
-                erro["erro_verify"] = r"密码错误！"
-                return render(request, "login.html", erro)
+                return_dict["erro_verify"] = r"密码错误！"
+                return render(request, "login.html", return_dict)
             else:
                 request.session["userinfo"] = {"is_login": True, "user": user, "pwd": pwd}
                 print("session的值", request.session.get("userinfo"))
                 # erro["erro_verify"] = mark_safe("<button><a herf='/Main/books_input/'>请进入操作页面！</a></button>")
-                return render(request, "books_input.html", erro)
+                return render(request, "books_input.html", return_dict)
 
-    return render(request, "login.html", locals())
+    return render(request, "login.html", return_dict)
 
 
 # 注册
 def register(request, **kwargs):
+    if request.session.session_key:
+        userinfo = request.session.get("userinfo", None)
+        return_dict = {"user": userinfo["user"]}
+    else:
+        return_dict = {}
 
     if request.method == "POST":
         user = request.POST.get("username_2", None)
@@ -76,18 +90,16 @@ def register(request, **kwargs):
         if idcode == "请输入身份证号":
             idcode = None
 
-        erro = {}
-
         if len(UserInfo.objects.filter(username=user)) >= 1:
-            erro["erro_verify"] = r"该用户名已存在！"
-            return render(request, "register.html", erro)
+            return_dict["erro_verify"] = r"该用户名已存在！"
+            return render(request, "register.html", return_dict)
         else:
             UserInfo.objects.create(username=user, password=pwd, birthday=birth, e_mail=email, mobile=mobile,
                                     identify_code=idcode)
-            erro["erro_verify"] = r"注册成功！请登录！"
-            return render(request, "login.html", erro)
+            return_dict["erro_verify"] = r"注册成功！请登录！"
+            return render(request, "login.html", return_dict)
     else:
-        return render(request, "register.html", locals())
+        return render(request, "register.html", return_dict)
 
 
 def operation(request, **kwargs):
@@ -117,7 +129,7 @@ def books_input(request, *args, **kwargs):
     # else:
     #     print("错误")
 
-    # print("bbb", request.session, request.session.session_key)
+    # print("books_input：", request.session, request.session.session_key)
     # print("session的值", request.session.get("userinfo"))
 
     userinfo = request.session.get("userinfo", None)
@@ -368,6 +380,18 @@ def propernoun_input(request, **kwargs):
     response.set_cookie("time_interval_propernoun", time_interval_propernoun)
 
     return response
+
+
+@login_session
+def user_page(request, *args, **kwargs):
+    userinfo = request.session.get("userinfo", None)
+    return_dict = {"user": userinfo["user"]}
+    return render(request, "user_page.html", return_dict)
+
+
+def logout(request, *args, **kwargs):
+    request.session.delete(request.session.session_key)
+    return render(request, "logout.html", locals())
 
 
 @login_session

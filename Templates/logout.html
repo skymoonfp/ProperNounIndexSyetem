@@ -8,8 +8,7 @@
 
     <!--    <title>&#9829;专名索引系统&#9829;-欢迎登陆/注册！&nbsp;&nbsp;</title>-->
 
-    {% block content_head %}
-    {% endblock %}
+    <title>&#9829;专名索引系统&#9829;-登出！&nbsp;&nbsp;</title>
 
     <link href="favicon.ico" rel="icon" type="image/x-ico">
     <link href="favicon.ico" rel="shortcut icon" type="image/x-ico">
@@ -21,10 +20,6 @@
     <script src="/static/js/jQuery-3.4.1.js"></script>
     <script src="/static/js/jquery.easyui.min.js" type="text/javascript"></script>
     <script src="/static/js/head.js" type="text/javascript"></script>
-    <script src="/static/js/basic_tab.js" type="text/javascript"></script>
-    <script src="/static/js/input.js" type="text/javascript"></script>
-    <script src="/static/js/send_form.js" type="text/javascript"></script>
-    <script src="/static/js/user_page.js" type="text/javascript"></script>
 
     <script>
 
@@ -44,19 +39,16 @@
         <div id="header_link" style="border:1px solid red;">
             <div class="user_page">
                 <a style="float:left;">亲爱的</a>
-                <ul style="float:left;">
-                    <li id="user_page"><a href="/Main/user_page/">{{user}}</a></li>
-                    <li class="hide"><a href="/Main/user_page/">个人中心</a></li>
-                    <li class="hide"><a href="/Main/logout/">登&nbsp;&nbsp;出</a></li>
-                </ul>
-                <a style="float:left;">，欢迎登陆！</a>
+
+                <a style="float:left;">&nbsp;&nbsp;&nbsp;&nbsp;，欢迎登陆！</a>
             </div>
             <br>
             <div>
                 <ul style="margin-top:50px;">
                     <li><a href="https://www.douban.com/people/skymoon_fp/"><b style="font-size:20px;font-family:'楷体';">心齋觀化的豆瓣</b></a>
                     </li>
-                    <li><a href="https://github.com/skymoonfp/"><b style="font-size:20px;font-family:'楷体';">心齋觀化的GitHub</b></a>
+                    <li><a href="https://github.com/skymoonfp/"><b
+                            style="font-size:20px;font-family:'楷体';">心齋觀化的GitHub</b></a>
                     </li>
                 </ul>
             </div>
@@ -89,8 +81,9 @@
     <br><br>
 
     <div id="body_main">
-        {% block content_body_main %}
-        {% endblock %}
+        <h1>您已经登出！</h1>
+
+        <h2>继续使用请<a href="/Main/login/">登陆</a></h2>
     </div>
 
     <br><br>

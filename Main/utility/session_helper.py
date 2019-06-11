@@ -20,7 +20,7 @@ def login_session(main_func):
         print(request.session)
         print(request.session.session_key)
         userinfo = request.session.get("userinfo", None)
-        print("aaa", userinfo)
+        # print("login_session：", userinfo)
         if userinfo["is_login"]:
             return main_func(request, *args, **kwargs)
         else:
