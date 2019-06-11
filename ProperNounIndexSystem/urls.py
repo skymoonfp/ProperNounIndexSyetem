@@ -17,13 +17,19 @@ Including another URLconf
 import os
 
 from django.conf.urls import url, include
+from django.contrib import admin
 from django.urls import re_path
 from django.views.static import serve
 
 from ProperNounIndexSystem import settings
 from ProperNounIndexSystem.activator import process
 
+admin.autodiscover()
+
 urlpatterns = [
+
+    url(r'^admin/', admin.site.urls),
+    # url(r'^admin/', include('django.contrib.admin.urls')),
 
     url(r"^Main/index/(\w*)", include("Main.urls")),
     url(r'^(?P<app>(\w+))/(?P<function>(\w+))/(?P<page>(\w+))/(?P<id>(\w+))/$', process),
@@ -33,3 +39,4 @@ urlpatterns = [
     re_path(r'^image/(?P<path>.*)$', serve, {'document_root': os.path.join(settings.BASE_DIR, 'image')}),
 
 ]
+
