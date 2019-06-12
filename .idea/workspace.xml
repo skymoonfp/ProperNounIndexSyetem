@@ -1,18 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c741e2d6-a620-4e6b-ba80-92ff2490c97c" name="Default Changelist" comment="">
+    <list default="true" id="c741e2d6-a620-4e6b-ba80-92ff2490c97c" name="Default Changelist" comment="Initial commit&#10;&#10;Signed-off-by: 心齋 &lt;954918@qq.com&gt;">
+      <change afterPath="$PROJECT_DIR$/Templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProperNounIndexSystem/activator.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProperNounIndexSystem/activator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/books_input.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/books_input.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/static/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/master/general.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/master/general.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/master/operation_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/master/operation_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/propernoun_input.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/propernoun_input.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/static/css/fullscreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/static/css/fullscreen.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/static/js/searchEngine.js" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/static/js/searchEngine.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +12,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Templates/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -51,7 +52,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Main/forms/books.py" />
         <option value="$PROJECT_DIR$/ProperNounIndexSyetem/propernoun_input.html" />
         <option value="$PROJECT_DIR$/Templates/test.html" />
         <option value="$PROJECT_DIR$/Templates/master/forms.html" />
@@ -102,6 +102,7 @@
         <option value="$PROJECT_DIR$/Templates/static/js/searchEngine.js" />
         <option value="$PROJECT_DIR$/Templates/master/operation_page.html" />
         <option value="$PROJECT_DIR$/Templates/master/general.html" />
+        <option value="$PROJECT_DIR$/Templates/home.html" />
       </list>
     </option>
   </component>
@@ -442,7 +443,14 @@
       <option name="project" value="LOCAL" />
       <updated>1560275051070</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Initial commit&#10;&#10;Signed-off-by: 心齋 &lt;954918@qq.com&gt;">
+      <created>1560311054373</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1560311054373</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView">
@@ -456,6 +464,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19378307" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -509,13 +518,6 @@
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Templates/static/css/operation_tab.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Templates/static/js/returntop.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -930,6 +932,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
           <caret line="27" column="53" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
         </state>
       </provider>
     </entry>
