@@ -22,10 +22,10 @@
 
 ######部署步骤
 
-    1. 和Django放置在同一目录下
-    
+    1. 运行命令行，进入该项目目录
+
     2. 运行服务器端：
-        python manage.py runserver
+        python manage.py runserver 0.0.0.0:8000
     
     3. 更新数据库：
         python manage.py makemigrations
@@ -94,7 +94,7 @@
     └── ... 
     
     
-######V1.0.0 版本内容更新
+######V2.0.0 版本内容更新
 
     1. 新功能     aaaaaaaaa
     2. 新功能     bbbbbbbbb
@@ -105,6 +105,7 @@
 ######历史版本
 
     V1.0.0
+    V2.0.0
 
 
 ######更新链接

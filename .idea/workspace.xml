@@ -3,17 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c741e2d6-a620-4e6b-ba80-92ff2490c97c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/logout.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/logout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/master/general.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/master/general.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/master/operation_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/master/operation_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/user_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/user_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/image/login/001.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/image/001.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/image/login/001.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/image/001.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/image/login/003.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/image/003.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/image/operation/002.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/image/002.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProperNounIndexSystem/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProperNounIndexSystem/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,7 +13,47 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ProperNounIndexSystem/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="82">
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/manage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../Anaconda3/Lib/importlib/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3000">
+              <caret line="126" selection-start-line="126" selection-end-line="126" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="312">
+                <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -75,12 +106,10 @@
         <option value="$PROJECT_DIR$/Templates/static/js/basic_tab.js" />
         <option value="$PROJECT_DIR$/Templates/static/js/form.js" />
         <option value="$PROJECT_DIR$/Templates/static/js/page_change.js" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Main/utility/search_helper.py" />
         <option value="$PROJECT_DIR$/Main/forms.py" />
         <option value="$PROJECT_DIR$/Templates/index.html" />
         <option value="$PROJECT_DIR$/Templates/static/css/basic_tab.css" />
-        <option value="$PROJECT_DIR$/ProperNounIndexSystem/settings.py" />
         <option value="$PROJECT_DIR$/Templates/static/logout.html" />
         <option value="$PROJECT_DIR$/Main/utility/session_helper.py" />
         <option value="$PROJECT_DIR$/Templates/static/css/user_page.css" />
@@ -103,13 +132,15 @@
         <option value="$PROJECT_DIR$/Templates/logout.html" />
         <option value="$PROJECT_DIR$/Templates/test.html" />
         <option value="$PROJECT_DIR$/Templates/register.html" />
+        <option value="$PROJECT_DIR$/ProperNounIndexSystem/settings.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="435" />
-    <option name="y" value="2" />
-    <option name="width" value="1494" />
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="845" />
     <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -158,19 +189,12 @@
             <path>
               <item name="ProperNounIndexSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProperNounIndexSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="image" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProperNounIndexSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProperNounIndexSystem" type="462c0819:PsiDirectoryNode" />
               <item name="Templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProperNounIndexSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProperNounIndexSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="Templates" type="462c0819:PsiDirectoryNode" />
-              <item name="master" type="462c0819:PsiDirectoryNode" />
+              <item name="manage.py" type="8704e2dd:PyFileNode" />
             </path>
           </expand>
           <select />
@@ -182,7 +206,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../python_project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../python_project" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
@@ -256,6 +280,10 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.manage" />
+      <item itemvalue="Python.models" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.models" />
@@ -455,7 +483,14 @@
       <option name="project" value="LOCAL" />
       <updated>1560322721555</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Initial commit&#10;&#10;Signed-off-by: 心齋 &lt;954918@qq.com&gt;">
+      <created>1560323608682</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1560323608682</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TodoView">
@@ -469,13 +504,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19378307" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3529412" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49074075" weight="0.44852942" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49074075" weight="0.5617647" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -522,30 +558,6 @@
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../django/django/forms/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="466" column="6" selection-start-line="466" selection-start-column="6" selection-end-line="466" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/form.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2112">
-          <caret line="159" column="19" lean-forward="true" selection-start-line="159" selection-start-column="19" selection-end-line="159" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1776">
-            <caret line="73" column="45" selection-start-line="73" selection-start-column="45" selection-end-line="73" selection-end-column="45" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Main/utility/search_helper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="534">
@@ -609,13 +621,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProperNounIndexSystem/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2646">
-          <caret line="140" lean-forward="true" selection-start-line="140" selection-end-line="140" />
         </state>
       </provider>
     </entry>
@@ -934,6 +939,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="30" column="14" lean-forward="true" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProperNounIndexSystem/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Anaconda3/Lib/importlib/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3000">
+          <caret line="126" selection-start-line="126" selection-end-line="126" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="312">
+            <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
