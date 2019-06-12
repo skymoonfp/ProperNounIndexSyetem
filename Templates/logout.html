@@ -55,14 +55,19 @@
         </div>
 
         <div id="header_other">
-            <b style="background-color:blue;">便捷功能区</b>
-            <h3>搜索</h3>
-            <select>
-                <option value="1">上海</option>
-                <option selected="selected" value="2">北京</option>
-                <option value="3">广州</option>
-            </select>
-            <h3>网址</h3>
+            <b style="background-color:blue;">便捷功能区</b><br>
+            <b>搜索</b>
+            <form action="" id="fsearch" method="GET">
+                <input checked="checked" name="search_engine" type="radio" value="baidu"><a
+                    style="font-size:13px;">百度</a>
+                <input name="search_engine" type="radio" value="google"><a style="font-size:13px;">谷歌</a>
+                <input name="search_engine" type="radio" value="sogou"><a style="font-size:13px;">搜狗</a>
+                <br>
+                <input id="search_1" name="" type="text"><br>
+                <button onclick="SearchEngine('fsearch', 'search_1');">搜索</button>
+            </form>
+            <br>
+            <b>网址</b>
             <select>
                 <optgroup label="河北省">
                     <option>石家庄</option>
