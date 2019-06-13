@@ -29,14 +29,14 @@ admin.autodiscover()
 urlpatterns = [
 
     url(r'^admin/', admin.site.urls),
-    # url(r'^admin/', include('django.contrib.admin.urls')),
-
+    url(r'^api/', include('Main.urls')),
     url(r"^Main/index/(\w*)", include("Main.urls")),
+    re_path(r'^image/(?P<path>.*)$', serve, {'document_root': os.path.join(settings.BASE_DIR, 'image')}),
+
     url(r'^(?P<app>(\w+))/(?P<function>(\w+))/(?P<page>(\w+))/(?P<id>(\w+))/$', process),
     url(r'^(?P<app>(\w+))/(?P<function>(\w+))/(?P<id>(\w+))/$', process),
     url(r'^(?P<app>(\w+))/(?P<function>(\w+))/$', process),
     url(r'^(?P<app>(\w+))/$', process, {'function': 'index'}),
-    re_path(r'^image/(?P<path>.*)$', serve, {'document_root': os.path.join(settings.BASE_DIR, 'image')}),
 
 ]
 
