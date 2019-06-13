@@ -16,7 +16,6 @@ from django.conf.urls import url, include
 from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
 
-from Main.models import *
 from Main.views import *
 
 
@@ -77,9 +76,6 @@ router.register(r'UserClass', UserClassViewSet)
 
 urlpatterns = [
 
-    url(r"^index/(\w*)/$", index),
-    url(r"^(\w*)/login/(\d*)/$", login),
-    url(r"^site_map/(?P<name>\d*)/$", site_map),
     url(r'^', include(router.urls)),
 
 ]

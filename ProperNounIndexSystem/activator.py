@@ -31,7 +31,7 @@ def process(request, **kwargs):
     except Exception as e:
         print(Exception, e)
         # 代码执行异常时，自动跳转到指定页面
-        return redirect('/Main/index/')
+        return redirect('/Main/logout/')
         # return HttpResponse('代码执行异常：'.encode("gbk"), e)
 
     return result
