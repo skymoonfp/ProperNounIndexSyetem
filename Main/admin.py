@@ -25,24 +25,27 @@ class BooksAdmin(admin.ModelAdmin):
     list_filter = ("book_name", "author", "translator", "edition", "publication_date", "create_time")
 
 
-class ProperNounIndexAdmin(admin.ModelAdmin):
-    list_display = (
-    "id", "book_name", "ISBN", "Noun", "page", "noun_property", "classes", "relation", "comment", "context",
-    "create_time")
-    search_fields = (
-    "id", "book_name", "ISBN", "Noun", "page", "noun_property", "classes", "relation", "comment", "context",
-    "create_time")
-    list_filter = ("book_name", "Noun", "page", "noun_property", "classes", "relation", "comment", "create_time")
+class ProperNounAdmin(admin.ModelAdmin):
+    list_display = ("id", "Noun", "classes", "properties", "relation", "comment", "create_time")
+    search_fields = ("id", "Noun", "book", "category", "classes", "properties", "relation", "comment", "create_time")
+    list_filter = ("Noun", "book", "category", "classes", "properties", "create_time")
 
 
-class NounPropertyAdmin(admin.ModelAdmin):
-    list_display = ("id", "noun_property_name")
-    search_fields = ("id", "noun_property_name")
-    list_filter = ("noun_property_name",)
+class BookNounIndexAdmin(admin.ModelAdmin):
+    list_display = ("id", "book", "Noun", "page", "context", "create_time")
+    search_fields = ("id", "book", "Noun", "page", "context", "create_time")
+    list_filter = ("book", "Noun", "create_time")
+
+
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ("id", "category")
+    search_fields = ("id", "category")
+    list_filter = ("category",)
 
 
 admin.site.register(models.UserInfo, UserInfoAdmin)
 admin.site.register(models.UserClass, UserClassAdmin)
 admin.site.register(models.Books, BooksAdmin)
-admin.site.register(models.ProperNounIndex, ProperNounIndexAdmin)
-admin.site.register(models.NounProperty, NounPropertyAdmin)
+admin.site.register(models.ProperNoun, ProperNounAdmin)
+admin.site.register(models.BookNounIndex, BookNounIndexAdmin)
+admin.site.register(models.Category, CategoryAdmin)
